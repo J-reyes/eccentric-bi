@@ -8,11 +8,16 @@ import store from './components/redux/store/index'
 import { Provider } from 'react-redux'
 
 import { BrowserRouter } from 'react-router-dom';
+import RegistrationPage from './components/registration/registration';
+
+
+
+
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <LoginPage />
+    <Container />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );
