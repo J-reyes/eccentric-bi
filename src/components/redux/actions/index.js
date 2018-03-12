@@ -18,3 +18,7 @@ const makeActionCreator = (type, ...argNames) => (...args) => {
 
 // var x = addTodo('hello')
 // x = {type: "ADD_TODO", text: "hello"}
+
+const ADD_SEARCH = 'ADD_SEARCH';
+
+export const addSearchItem = (ADD_SEARCH, 'payload'); 
