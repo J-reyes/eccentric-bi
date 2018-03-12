@@ -1,12 +1,18 @@
 const path = require('path')
 
 module.exports = {
-  entry: './scripts/app.js',
+  entry: './src/app.js',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   module: {
+    loaders: [
+      { 
+        test: /\.(png|jpg)$/, 
+        loader: 'url-loader?limit=8192' 
+      }
+    ],
     rules: [
       {
         loader: 'babel-loader',
