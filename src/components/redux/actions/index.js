@@ -22,5 +22,6 @@ const makeActionCreator = (type, ...argNames) => (...args) => {
 const ADD_SEARCH = 'ADD_SEARCH';
 const ADD_LOGIN = 'ADD_LOGIN';
 
+
 export const addSearchItem = makeActionCreator(ADD_SEARCH, 'payload'); 
 export const addLogin = makeActionCreator(ADD_LOGIN, 'payload');
