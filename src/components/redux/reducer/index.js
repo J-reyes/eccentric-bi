@@ -27,12 +27,15 @@ const loginPage = ( state = initialState, action ) => {
                 ...state,
                 login: action.payload
             }
+        default: 
+            return state;
     }
 }
 
 
 const rootReducer = combineReducers({
     navbarFields,
+    loginPage
 })
 
 
