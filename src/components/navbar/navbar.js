@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { addSearchItem } from './../redux/actions/index'
 
 
-class extends Component {
+class NavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
