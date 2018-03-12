@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addLogin } from './../redux/actions/index';
 
 class UserLogin extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            username: '',
+            password: ''
+         }
     }
     render() { 
         return ( 
@@ -28,5 +33,12 @@ class UserLogin extends Component {
          )
     }
 }
+
+
+
+mapDispatchToProps = dispatch => ({
+    sendLogin: login => dispatch(addLogin(login))
+})
+
  
-export default UserLogin;
+export default connect(null, mapDispatchToProps)(UserLogin);

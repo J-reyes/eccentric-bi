@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
-import { ADD_SEARCH } from './../actions/index'
+import { ADD_SEARCH, ADD_LOGIN } from './../actions/index'
 
 
 const initialState = {
-    searchField = '',
+    searchField: '',
+    login: {username: '', password: ''}
 
 }
 
@@ -16,6 +17,16 @@ const navbarFields = (state = initialState, action) => {
             }
         default: 
             return state;
+    }
+}
+
+const loginPage = ( state = initialState, action ) => {
+    switch (action.type) {
+        case ADD_LOGIN:
+            return {
+                ...state,
+                login: action.payload
+            }
     }
 }
 
