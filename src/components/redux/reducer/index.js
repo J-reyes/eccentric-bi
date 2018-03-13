@@ -16,7 +16,8 @@ const initialState = {
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nulla expedita nam saepe explicabo non atque aliquid.'
         }
     ],
-    register: { firstnameInput: '', lastnameInput: '', companyInput: '', email: '', passwordInput: '', confirmInput: ''}
+    register: []
+
 }
 
 
@@ -48,10 +49,7 @@ const loginPage = (state = initialState, action) => {
 const registrationForm = (state = initialState, action) => {
     switch(action.type) {
         case CREATE_ACCOUNT:
-            return {
-            ...state,
-            register: action.payload
-        }
+        return {...state, register: [...state.register, action.payload]}
         default:
             return state;
     }
