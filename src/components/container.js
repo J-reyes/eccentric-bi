@@ -3,7 +3,7 @@ import { Link, Switch, Route } from 'react-router-dom';
 import LoginPage from './user-login/login-page'
 
 // import components 
-// import SideBar from './sidebar/sidebar.js';
+import SideBar from './sidebar/sidebar.js';
 
 
 

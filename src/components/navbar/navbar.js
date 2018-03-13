@@ -15,7 +15,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div>
+            <div className="pull-right">
                 <input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} />
                 <button onClick={ () => this.props.sendSearch(this.state.searchValue) } >Enter</button>
             </div>

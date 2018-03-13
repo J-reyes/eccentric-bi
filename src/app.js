@@ -10,7 +10,10 @@ import store from './components/redux/store/index'
 import { Provider } from 'react-redux'
 
 import { BrowserRouter } from 'react-router-dom';
+
+
 // import Registration from './components/registration/registration';
+import UserProfile from './components/user-profile/user-profile';
 
 // testing charts
 import Chart from './components/tiles/Chart'
@@ -20,7 +23,7 @@ import Chart from './components/tiles/Chart'
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <Registration />
+    <UserProfile />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

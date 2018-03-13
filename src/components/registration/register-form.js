@@ -68,7 +68,7 @@ class RegistrationForm extends Component {
                                     <input type="text" className="form-control" placeholder="Company" onChange={(e) => { this.setState({companyInput: e.target.value })}} value={this.state.companyInput} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Enter Email" value={this.state.email} onChange-={(e) => { this.setState({email: e.target.value })}}  />
+                                    <input type="text" className="form-control" placeholder="Enter Email" value={this.state.email} onChange={(e) => { this.setState({email: e.target.value })}}  />
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control" placeholder="Password" onChange={(e) => { this.setState({passwordInput: e.target.value })}} value={this.state.passwordInput}  />
