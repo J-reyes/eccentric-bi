@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { addWidget } from '../redux/actions/index';
+import { connect } from 'react-redux';
+import { WEATHERWIDGET, BITCOINWIDGET, TWITTERWIDGET, CALENDARWIDGET, REDWOODWIDGET } from '../redux/reducer/widget-reducer';
 
-import WeatherWidget from './../widgets/weather-widget';
-import BitcoinWidget from './../widgets/bitcoin-widget';
-import TwitterWidget from './../widgets/twitter-widget';
-import CalendarWidget from './../widgets/calendar-widget';
-import RedwoodWidget from './../widgets/redwood-widget';
 
 class WidgetDropdown extends Component {
     constructor(props) {
         super(props);
         this.state = {
             dropdownOpen: false,
-            widgetBar: []
         }
     }
     toggle = () => {
@@ -31,16 +28,26 @@ class WidgetDropdown extends Component {
                             Widgets
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem onClick={(e) => this.setState({ widgetBar: <WeatherWidget /> })} >Weather</DropdownItem>
-                            <DropdownItem >Bitcoin</DropdownItem>
-                            <DropdownItem >Twitter</DropdownItem>
-                            <DropdownItem >Calendar</DropdownItem>
-                            <DropdownItem >Redwood</DropdownItem>
+                            <DropdownItem onClick={() => this.props.createWidget(WEATHERWIDGET) } >Weather</DropdownItem>
+                            <DropdownItem onClick={() => this.props.createWidget(BITCOINWIDGET) } >Bitcoin</DropdownItem>
+                            <DropdownItem onClick={() => this.props.createWidget(TWITTERWIDGET) } >Twitter</DropdownItem>
+                            <DropdownItem onClick={() => this.props.createWidget(CALENDARWIDGET) } >Calendar</DropdownItem>
+                            <DropdownItem onClick={() => this.props.createWidget(REDWOODWIDGET) } >Redwood</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                     <div className="display-container">
                         {
-                            this.state.widgetBar
+                            this.props.widgetList.map((widget, index) =>
+                            {
+                                const WidgetComponent = widget;
+                                return (
+                                    <div key={index}  className="col-sm-3">
+                                        <WidgetComponent />
+                                    </div>
+                                    
+                                )
+                            }
+                            )
                         }
                     </div>
                 </div>
@@ -51,4 +58,12 @@ class WidgetDropdown extends Component {
     }
 }
 
-export default WidgetDropdown;
+const mapStateToProps = state => ({
+    widgetList: state.widgetContainer.widgetList
+})
+
+const mapDispatchToProps = dispatch => ({
+    createWidget: widgetType => dispatch(addWidget(widgetType))
+})
+
+export default connect (mapStateToProps, mapDispatchToProps)(WidgetDropdown);
