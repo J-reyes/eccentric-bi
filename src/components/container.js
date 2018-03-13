@@ -19,7 +19,6 @@ class Container extends Component {
     render() {
         return (
 
-
             <div className="container-fluid">
                 <NavBar />
                 <div>
@@ -30,7 +29,7 @@ class Container extends Component {
                 </div>
                
                 <DashBoardPage />
-
+                </div>
 
                 <Switch>
                     <Route exact path="/" render={() => <LoginPage />} />
