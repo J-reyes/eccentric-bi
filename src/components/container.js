@@ -20,7 +20,7 @@ class Container extends Component {
         return (
             <div className="container-fluid">
                 <SideBar className="pull-left" />
-                <div className="row top-row">
+                <div className="pull-center" >
                     <Title />
                     <NavBar />
                 </div>
