@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import Container from './components/container';
-
+import Dashboard from './components/dashboard/dashboard';
+import WidgetDropdown from './components/dashboard/widget-dropdown'
 
 import store from './components/redux/store/index'
 import { Provider } from 'react-redux'
@@ -14,17 +15,15 @@ import { BrowserRouter } from 'react-router-dom';
 import UserProfile from './components/user-profile/user-profile';
 
 // testing charts
-import Chart from './components/tiles/Chart'
-import DashboardTile from './components/dashboard/dashboard-tile';
-import dashboard from './components/dashboard/dashboard';
-import DashBoardPage from './components/dashboard/dasboard-page';
+import TileContainer from './components/tiles/tile-container'
 
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <Container />
+    <WidgetDropdown />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

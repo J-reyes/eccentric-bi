@@ -8,6 +8,11 @@ import Dragula from 'react-dragula';
 
 import DashboardTile from './dashboard-tile';
 import LargeTile from './large-tile';
+import WeatherWidget from './../widgets/weather-widget';
+import BitcoinWidget from './../widgets/bitcoin-widget';
+import TwitterWidget from './../widgets/twitter-widget';
+import CalendarWidget from './../widgets/calendar-widget';
+import RedwoodWidget from './../widgets/redwood-widget';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -35,6 +40,11 @@ class Dashboard extends Component {
                             </div>
                         )}
                 </div>
+                <div className="col-sm-3"><WeatherWidget /></div>
+                <div className="col-sm-3"><CalendarWidget /></div>
+                <div className="col-sm-3"><BitcoinWidget /></div>
+                <div className="col-sm-3"><TwitterWidget /></div>
+                <div className="col-sm-3"><RedwoodWidget /></div>
                 <div id="large-tiles" className="row col-sm-12" >
                     <div className="specialContainer" ><BarTile /></div>
                 </div>

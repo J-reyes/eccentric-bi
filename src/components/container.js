@@ -6,7 +6,7 @@ import SideBar from './sidebar/sidebar'
 import LoginPage from './user-login/login-page'
 import Dashboard from './dashboard/dashboard';
 import NavBar from './navbar/navbar';
-import DashBoardPage from './dashboard/dasboard-page';
+import UserProfile from './user-profile/user-profile';
 
 
 
@@ -24,6 +24,9 @@ class Container extends Component {
                 <NavBar />
                 <div>
                 <SideBar className="pull-left" />
+                <div className="pull-center" >
+                    <Title />
+                    <NavBar />
                 </div>
                
                 <DashBoardPage />
@@ -32,6 +35,7 @@ class Container extends Component {
                 <Switch>
                     <Route exact path="/" render={() => <LoginPage />} />
                     <Route path="/dashboard" render={() => <Dashboard />} />
+                    <Route path="/userprofile" render={() => <UserProfile />} />
                 </Switch>
 
             </div>

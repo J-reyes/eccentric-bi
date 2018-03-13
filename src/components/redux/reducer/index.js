@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux'
-import { ADD_SEARCH, ADD_LOGIN, CREATE_ACCOUNT } from './../actions/index'
+import { ADD_SEARCH, ADD_LOGIN, CREATE_ACCOUNT, ADD_WIDGET } from './../actions/index'
 import charts from './chart-reducer'
+import toDo from './todo-reducer'
+import widgetContainer from './widget-reducer'
+import tileContainer from './tile-container-reducer'
 
 
 const initialState = {
@@ -60,7 +63,10 @@ const rootReducer = combineReducers({
     navbarFields,
     loginPage,
     registrationForm,
-    charts
+    charts,
+    toDo,
+    widgetContainer,
+    tileContainer
 })
 
 

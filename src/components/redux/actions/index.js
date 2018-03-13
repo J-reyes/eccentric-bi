@@ -19,12 +19,13 @@ const makeActionCreator = (type, ...argNames) => (...args) => {
 // var x = addTodo('hello')
 // x = {type: "ADD_TODO", text: "hello"}
 
-const ADD_SEARCH = 'ADD_SEARCH';
-const ADD_LOGIN = 'ADD_LOGIN';
-const CREATE_ACCOUNT ='CREATE_ACCOUNT';
-
-
-
+export const ADD_SEARCH = 'ADD_SEARCH';
+export const ADD_LOGIN = 'ADD_LOGIN';
+export const CREATE_ACCOUNT ='CREATE_ACCOUNT';
+export const ADD_TODO = 'ADD_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
+export const ADD_TILE = 'ADD_TILE';
+export const ADD_WIDGET = 'ADD_WIDGET';
 
 
 
@@ -32,3 +33,7 @@ const CREATE_ACCOUNT ='CREATE_ACCOUNT';
 export const addSearchItem = makeActionCreator(ADD_SEARCH, 'payload'); 
 export const addLogin = makeActionCreator(ADD_LOGIN, 'payload');
 export const createAccount = makeActionCreator(CREATE_ACCOUNT, 'payload');
+export const addToDo = makeActionCreator(ADD_TODO, 'payload');
+export const removeToDo = makeActionCreator(REMOVE_TODO, "payload");
+export const addTile = makeActionCreator(ADD_TILE, "payload");
+export const addWidget = makeActionCreator(ADD_WIDGET, 'payload');
