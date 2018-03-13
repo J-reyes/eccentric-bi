@@ -15,7 +15,7 @@ import { BrowserRouter } from 'react-router-dom';
 import UserProfile from './components/user-profile/user-profile';
 
 // testing charts
-import DoughnutTile from './components/tiles/doughnut-tile'
+import TileContainer from './components/tiles/tile-container'
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -23,7 +23,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <WidgetDropdown />
+    <TileContainer />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

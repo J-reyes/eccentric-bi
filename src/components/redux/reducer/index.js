@@ -3,6 +3,7 @@ import { ADD_SEARCH, ADD_LOGIN, CREATE_ACCOUNT, ADD_WIDGET } from './../actions/
 import charts from './chart-reducer'
 import toDo from './todo-reducer'
 import widgetContainer from './widget-reducer'
+import tileContainer from './tile-container-reducer'
 
 
 const initialState = {
@@ -64,7 +65,8 @@ const rootReducer = combineReducers({
     registrationForm,
     charts,
     toDo,
-    widgetContainer
+    widgetContainer,
+    tileContainer
 })
 
 

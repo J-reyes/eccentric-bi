@@ -29,6 +29,7 @@ export const ADD_WIDGET = 'ADD_WIDGET';
 
 
 
+
 export const addSearchItem = makeActionCreator(ADD_SEARCH, 'payload'); 
 export const addLogin = makeActionCreator(ADD_LOGIN, 'payload');
 export const createAccount = makeActionCreator(CREATE_ACCOUNT, 'payload');
