@@ -11,14 +11,14 @@ import { BrowserRouter } from 'react-router-dom';
 // import Registration from './components/registration/registration';
 
 // testing charts
-import Chart from './components/tiles/Chart'
+import DoughnutTile from './components/tiles/doughnut-tile'
 
 
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <Container />
+    <DoughnutTile />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

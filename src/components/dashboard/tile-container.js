@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ChartTile from './../tiles/chart-tile';
+// import ChartTile from './../tiles/chart-tile';
 import ReactDOM from 'react-dom';
 import Dragula from 'react-dragula';
 
@@ -39,13 +39,13 @@ class TileContainer extends Component {
                     {
                         this.props.tiles.map((item, index) =>
                             <div key={index} className=" container tile-container col-sm-3">
-                                <ChartTile />
+                                {/* <ChartTile /> */}
                                 {/* <DashboardTile title={item.title} content={item.content} /> */}
                             </div>
                         )}
                 </div>
                 <div id="large-tiles" className="row col-sm-12" >
-                    <div className="specialContainer" ><ChartTile /></div>
+                    {/* <div className="specialContainer" ><ChartTile /></div> */}
                 </div>
 
                 <div className="specialContainer" ><LargeTile map={this.state.img} /></div>
