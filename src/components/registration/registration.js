@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 
 // import Registration Form
 import RegistrationForm from './register-form';
+// import header from registration folder
+import Header from './header';
 
-class RegistrationPage extends Component {
+// import from navbar folder
+import NavBar from '../navbar/navbar';
+
+class Registration extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -11,10 +16,17 @@ class RegistrationPage extends Component {
     render() { 
         return ( 
             <div className="container-fluid">
+                <div className="row pull-right">
+                <NavBar />
+                </div>
+
+                <Header />
+
+                <RegistrationForm />
 
             </div> 
         )
     }
 }
  
-export default RegistrationPage;
+export default Registration;

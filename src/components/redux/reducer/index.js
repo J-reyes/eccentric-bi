@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux'
-import { ADD_SEARCH, ADD_LOGIN } from './../actions/index'
+import { ADD_SEARCH, ADD_LOGIN, CREATE_ACCOUNT } from './../actions/index'
 
 
 const initialState = {
     searchField: '',
-    login: {username: '', password: ''}
+    login: {username: '', password: ''},
+    register: {}
 
 }
 

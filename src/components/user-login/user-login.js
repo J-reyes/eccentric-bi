@@ -36,7 +36,7 @@ class UserLogin extends Component {
 
 
 
-mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     sendLogin: login => dispatch(addLogin(login))
 })
 

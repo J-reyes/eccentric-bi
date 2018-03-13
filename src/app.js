@@ -8,7 +8,7 @@ import store from './components/redux/store/index'
 import { Provider } from 'react-redux'
 
 import { BrowserRouter } from 'react-router-dom';
-import RegistrationPage from './components/registration/registration';
+import Registration from './components/registration/registration';
 
 
 
@@ -17,11 +17,7 @@ import RegistrationPage from './components/registration/registration';
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-<<<<<<< HEAD
-    <RegistrationPage />
-=======
-    <LoginPage />
->>>>>>> a28bb45dfb93e0327b639736885a30f724b035d8
+    <Registration />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );
