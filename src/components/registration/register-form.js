@@ -99,6 +99,4 @@ const mapDispatchToProps = dispatch => ({
     registration: register => dispatch(createAccount(register))
 })
 
-
-
-export default connect(null, mapDispatchToProps)(RegistrationForm);
+export default connect(null, mapDispatchToProps )(RegistrationForm);
