@@ -27,12 +27,9 @@ class TileDropdown extends React.Component {
           Select Tiles
         </DropdownToggle>
         <DropdownMenu>
-          {/* <DropdownItem onClick={() => this.props.createTile(BARCHART)}>Bar Chart</DropdownItem>
+          <DropdownItem onClick={() => this.props.createTile(BARCHART)}>Bar Chart</DropdownItem>
           <DropdownItem onClick={() => this.props.createTile(DOUGHNUTCHART)}>Doughnut Chart</DropdownItem>
-          <DropdownItem onClick={() => this.props.createTile(TODOTILE)}>To Do Widget</DropdownItem> */}
-          <DropdownItem >Bar Chart</DropdownItem>
-          <DropdownItem >Doughnut Chart</DropdownItem>
-          <DropdownItem >To Do Widget</DropdownItem>
+          <DropdownItem onClick={() => this.props.createTile(TODOTILE)}>To Do Widget</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );
