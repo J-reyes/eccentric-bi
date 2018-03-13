@@ -5,10 +5,12 @@ import { addSearchItem } from './../redux/actions/index'
 
 class NavBar extends Component {
     constructor(props) {
+        
         super(props);
         this.state = {
             searchValue: ''
         }
+        console.log(this.props)
     }
 
     render() {
