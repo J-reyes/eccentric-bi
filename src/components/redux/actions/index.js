@@ -25,6 +25,7 @@ export const CREATE_ACCOUNT ='CREATE_ACCOUNT';
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const ADD_TILE = 'ADD_TILE';
+export const ADD_WIDGET = 'ADD_WIDGET';
 
 
 
@@ -34,3 +35,4 @@ export const createAccount = makeActionCreator(CREATE_ACCOUNT, 'payload');
 export const addToDo = makeActionCreator(ADD_TODO, 'payload');
 export const removeToDo = makeActionCreator(REMOVE_TODO, "payload");
 export const addTile = makeActionCreator(ADD_TILE, "payload");
+export const addWidget = makeActionCreator(ADD_WIDGET, 'payload');

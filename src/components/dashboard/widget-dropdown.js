@@ -21,51 +21,34 @@ class WidgetDropdown extends Component {
         });
       }
     
-      render() {
+
+    render() {
         return (
-          <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle caret>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        );
-      }
-    
+            <div className="main-container">
+                <div className="widget-container">
+                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                        <DropdownToggle caret>
+                            Widgets
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem onClick={(e) => this.setState({ widgetBar: <WeatherWidget /> })} >Weather</DropdownItem>
+                            <DropdownItem >Bitcoin</DropdownItem>
+                            <DropdownItem >Twitter</DropdownItem>
+                            <DropdownItem >Calendar</DropdownItem>
+                            <DropdownItem >Redwood</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                    <div className="display-container">
+                        {
+                            this.state.widgetBar
+                        }
+                    </div>
+                </div>
 
-    // render() {
-        // return (
-        //     <div className="main-container">
-        //         <div className="widget-container">
-        //             <div className="widget-dropdown">
-        //                 <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-haspopup="true" aria-expanded="false" >
-        //                     Widgets
-        //                 </button>
-        //                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        //                     <a className="dropdown-item" href="#" onClick={(e) => this.setState({ widgetBar: <WeatherWidget /> })} >Weather</a>
-        //                     <a className="dropdown-item" href="#" >Bitcoin</a>
-        //                     <a className="dropdown-item" href="#" >Twitter</a>
-        //                     <a className="dropdown-item" href="#" >Calendar</a>
-        //                     <a className="dropdown-item" href="#" >Redwood</a>
-        //                 </div>
-        //             </div>
-        //             <div className="display-container">
-        //                 {
-        //                     this.state.widgetBar
-        //                 }
-        //             </div>
-        //         </div>
-
-        //     </div>
-        // )
+            </div>
+        )
         
-    // }
+    }
 }
 
 export default WidgetDropdown;
