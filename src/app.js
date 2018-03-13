@@ -10,16 +10,17 @@ import store from './components/redux/store/index'
 import { Provider } from 'react-redux'
 
 import { BrowserRouter } from 'react-router-dom';
-import Registration from './components/registration/registration';
+// import Registration from './components/registration/registration';
+
+// testing charts
+import Chart from './components/tiles/Chart'
 
 
-
-console.log(store.getState())
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <TileContainer />
+    <Chart />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );
