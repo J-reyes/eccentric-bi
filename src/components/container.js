@@ -7,7 +7,7 @@ import LoginPage from './user-login/login-page'
 import Dashboard from './dashboard/dashboard';
 import NavBar from './navbar/navbar';
 // import components 
-// import SideBar from './sidebar/sidebar.js';
+import SideBar from './sidebar/sidebar.js';
 
 
 

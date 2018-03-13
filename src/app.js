@@ -8,17 +8,20 @@ import store from './components/redux/store/index'
 import { Provider } from 'react-redux'
 
 import { BrowserRouter } from 'react-router-dom';
+
+
 // import Registration from './components/registration/registration';
+import UserProfile from './components/user-profile/user-profile';
 
 // testing charts
-import Chart from './components/tiles/Chart'
+import DoughnutTile from './components/tiles/doughnut-tile'
 
 
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <Container />
+    <DoughnutTile />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );
