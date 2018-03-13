@@ -10,7 +10,6 @@ class LoginPage extends Component {
     render() {
         return (
             <div className="page-container">
-                <Title />
                 <UserLogin />
             </div>
 

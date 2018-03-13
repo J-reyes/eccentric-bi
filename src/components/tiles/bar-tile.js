@@ -9,11 +9,14 @@ class BarTile extends Component {
     }
     render() { 
         return (
-            <Bar data={this.props.barData}/>
+            <Bar data={this.props.barData} height={this.props.height} />
         )
     }
 }
 
+BarTile.defaultProps = {
+    height: 100
+}
  
 const mapStateToProps = state => ({
     barData: state.charts.barData
