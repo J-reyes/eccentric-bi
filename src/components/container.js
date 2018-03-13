@@ -6,8 +6,8 @@ import SideBar from './sidebar/sidebar'
 import LoginPage from './user-login/login-page'
 import Dashboard from './dashboard/dashboard';
 import NavBar from './navbar/navbar';
-// import components 
-import SideBar from './sidebar/sidebar.js';
+import UserProfile from './user-profile/user-profile';
+
 
 
 
@@ -27,6 +27,7 @@ class Container extends Component {
                 <Switch>
                     <Route exact path="/" render={() => <LoginPage />} />
                     <Route path="/dashboard" render={() => <Dashboard />} />
+                    <Route path="/userprofile" render={() => <UserProfile />} />
                 </Switch>
 
             </div>
