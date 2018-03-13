@@ -15,6 +15,9 @@ import UserProfile from './components/user-profile/user-profile';
 
 // testing charts
 import Chart from './components/tiles/Chart'
+import DashboardTile from './components/dashboard/dashboard-tile';
+import dashboard from './components/dashboard/dashboard';
+import DashBoardPage from './components/dashboard/dasboard-page';
 
 
 

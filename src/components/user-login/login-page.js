@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+
 import UserLogin from './user-login';
 import Title from './../title';
 
@@ -9,7 +12,7 @@ class LoginPage extends Component {
     }
     render() {
         return (
-            <div className="page-container">
+            <div className="container-fluid">
                 <UserLogin />
             </div>
 

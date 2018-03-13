@@ -12,7 +12,9 @@ class UserLogin extends Component {
     }
     render() { 
         return ( 
-            <div className="container">
+            <div className="container-fluid">
+                <div className="row">
+                
                 <div id="login-box" className="col-sm-4 col-sm-offset-4">
                     <div className="form-group">
                         <label>User Name</label>
@@ -29,6 +31,10 @@ class UserLogin extends Component {
                         <a href="#" className="col-sm-offset-3" > New Users Register Here </a>
                     </div>
                 </div>
+                
+                
+                </div>
+                
             </div>
          )
     }

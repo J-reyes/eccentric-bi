@@ -5,7 +5,7 @@ import { addSearchItem } from './../redux/actions/index'
 
 class NavBar extends Component {
     constructor(props) {
-        
+
         super(props);
         this.state = {
             searchValue: ''
@@ -15,10 +15,13 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div className="pull-right">
-                <input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} />
-                <button onClick={ () => this.props.sendSearch(this.state.searchValue) } >Enter</button>
+            <div className="container-fluid pull-right">
+                <div>
+                    <input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} />
+                    <button onClick={() => this.props.sendSearch(this.state.searchValue)} >Enter</button>
+                </div>
             </div>
+
         )
     }
 }

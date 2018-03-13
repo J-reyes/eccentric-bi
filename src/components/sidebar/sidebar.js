@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
+import { Link, Switch, Route } from 'react-router-dom';
 
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
 import { ic_business } from 'react-icons-kit/md/ic_business';
@@ -17,9 +18,15 @@ class SideBar extends Component {
     }
     render() {
         return (
-            <div className="container">
-                <div style={{ background: '#ff5b57', color: '#FFF', width: 220 }}>
+
+            
+            
+            <div className="col-md-3" style={{ background: '#ff5b57', color: '#FFF', width: 220, height: 1020  }}>
+                <a href=""> <div className="logo"><img src="http://lbd-pro-react.creative-tim.com/static/media/logo.5d5d9eef.svg" alt=""/></div></a>
+                <a href="#" className="simple-text logo-normal" >Eccentric</a>
                     <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='dashboard'>
+                       
+                        
                         <Nav id='header'>
                             <NavIcon><SvgIcon size={40} icon={ic_aspect_ratio} /></NavIcon>
                             <NavText> Eccentric BI </NavText>
@@ -70,7 +77,8 @@ class SideBar extends Component {
 
                     </SideNav>
                 </div>
-            </div>
+          
+          
         )
     }
 }
