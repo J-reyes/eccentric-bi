@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { ADD_SEARCH, ADD_LOGIN, CREATE_ACCOUNT } from './../actions/index'
+import charts from './chart-reducer'
 
 
 const initialState = {
@@ -8,16 +9,18 @@ const initialState = {
     tiles: [
         {
             title: 'Title',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam, quidem magni id expedita rerum deleniti in explicabo maiores perferendis, rem suscipit?'
+            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam.'
         },
         {
             title: 'Title',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam, quidem magni id expedita rerum deleniti in explicabo maiores perferendis, rem suscipit?'
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nulla expedita nam saepe explicabo non atque aliquid.'
         }
     ],
     register: []
 
 }
+
+
 
 const navbarFields = (state = initialState, action) => {
     switch (action.type) {
@@ -48,7 +51,7 @@ const registrationForm = (state = initialState, action) => {
         case CREATE_ACCOUNT:
         return {...state, register: [...state.register, action.payload]}
         default:
-        return state;
+            return state;
     }
 }
 
@@ -56,7 +59,8 @@ const registrationForm = (state = initialState, action) => {
 const rootReducer = combineReducers({
     navbarFields,
     loginPage,
-    registrationForm
+    registrationForm,
+    charts
 })
 
 
