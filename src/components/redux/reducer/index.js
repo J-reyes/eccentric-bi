@@ -8,11 +8,11 @@ const initialState = {
     tiles: [
         {
             title: 'Title',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam, quidem magni id expedita rerum deleniti in explicabo maiores perferendis, rem suscipit?'
+            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam.'
         },
         {
             title: 'Title',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam, quidem magni id expedita rerum deleniti in explicabo maiores perferendis, rem suscipit?'
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nulla expedita nam saepe explicabo non atque aliquid.'
         }
     ],
     register: { firstnameInput: '', lastnameInput: '', companyInput: '', email: '', passwordInput: '', confirmInput: ''}

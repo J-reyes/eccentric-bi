@@ -1,28 +1,48 @@
 import React, { Component } from 'react';
-import DashboardTile from './dashboard-tile';
 import { connect } from 'react-redux';
+import dragula from 'react-dragula';
+
+import DashboardTile from './dashboard-tile';
+import LargeTile from './large-tile';
 
 class TileContainer extends Component {
     constructor(props) {
         super(props);
-        
-        this.state = { }
-         console.log(this.props.tiles)
+
+        this.state = {
+            img: 'https://www.muralswallpaper.co.uk/app/uploads/Black-and-White-typography-map-maps-plain-kj-820x532.jpg'
+        }
     }
-    render() { 
-        return ( 
+    render() {
+        return (
             <div id="dashboard-container">
-                {
-                    this.props.tiles.map((item, index) =>
-                        <div key={index} style={{border: '1px solid black'}} className="container tile-container col-sm-3">
-                            <DashboardTile title={item.title} content={item.content}/>
-                        </div>
-                )}
+                <div id="tile-ribbon" className="row">
+                    {
+                        this.props.tiles.map((item, index) =>
+                            <div key={index} className="container tile-container col-sm-3">
+                                <DashboardTile title={item.title} content={item.content} />
+                            </div>
+                        )}
+                </div>
+                <div id="large-tiles" className="row col-sm-12" >
+                    <div className="container" ref={this.dragulaDecorator} >
+                        <LargeTile map={this.state.img} />
+                        <LargeTile map={this.state.img} />
+                        <LargeTile map={this.state.img} />
+                    </div>
+
+                </div>
             </div>
-         )
+        )
+        dragulaDecorator = (componentBackingInstance) => {
+            if (componentBackingInstance) {
+              let options = { };
+              Dragula([componentBackingInstance], options);
+            }
+          };
     }
 }
- 
+
 const mapStateToProps = state => {
     return {
         tiles: state.loginPage.tiles
