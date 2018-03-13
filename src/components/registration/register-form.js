@@ -15,7 +15,7 @@ class RegistrationForm extends Component {
             firstnameInput: '',
             lastnameInput: '',
             companyInput: '',
-            emailInput: '',
+            email: '',
             passwordInput: '',
             confirmInput: ''
 
@@ -59,29 +59,31 @@ class RegistrationForm extends Component {
                         <form>
                             <div className="card  card-plugin">
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Your First Name" />
+                                    <input type="text" className="form-control" placeholder="Your First Name" onChange={(e) => { this.setState({firstnameInput: e.target.value })}} value={this.state.firstnameInput} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Your Last Name" />
+                                    <input type="text" className="form-control" placeholder="Your Last Name" onChange={(e) => { this.setState({lastnameInput: e.target.value })} } value={this.state.lastnameInput} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Company" />
+                                    <input type="text" className="form-control" placeholder="Company" onChange={(e) => { this.setState({companyInput: e.target.value })}} value={this.state.companyInput} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" className="form-control" placeholder="Enter Email" />
+                                    <input type="text" className="form-control" placeholder="Enter Email" value={this.state.email} onChange-={(e) => { this.setState({email: e.target.value })}}  />
                                 </div>
                                 <div className="form-group">
-                                    <input type="password" className="form-control" placeholder="Password" />
+                                    <input type="password" className="form-control" placeholder="Password" onChange={(e) => { this.setState({passwordInput: e.target.value })}} value={this.state.passwordInput}  />
                                 </div>
                                 <div className="form-group">
-                                    <input type="password" className="form-control" placeholder="Password Confirmation" />
+                                    <input type="password" className="form-control" placeholder="Password Confirmation" onChange={(e) => { this.setState({confirmInput: e.target.value })}} value={this.state.confirmInput} />
                                 </div>
 
                             </div>
 
                             <div className="foot text-center">
-                                <div className="legend">  <button className="btn btn-info">Create Free Account</button> </div>
-
+                                <div className="legend">
+                                    <button className="btn btn-info" onClick={(e) => { this.props.registration(this.state) }}>Create Free Account</button>
+                                </div>
+                                    
                             </div>
                         </form>
                     </div>
@@ -97,4 +99,6 @@ const mapDispatchToProps = dispatch => ({
     registration: register => dispatch(createAccount(register))
 })
 
-export default connect(null, mapDispatchToProps )(RegistrationFor);
+
+
+export default connect(null, mapDispatchToProps)(RegistrationForm);

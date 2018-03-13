@@ -19,7 +19,7 @@ console.log(store.getState())
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <TileContainer />
+    <Registration />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

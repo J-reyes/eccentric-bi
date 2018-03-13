@@ -31,3 +31,4 @@ const CREATE_ACCOUNT ='CREATE_ACCOUNT';
 
 export const addSearchItem = makeActionCreator(ADD_SEARCH, 'payload'); 
 export const addLogin = makeActionCreator(ADD_LOGIN, 'payload');
+export const createAccount = makeActionCreator(CREATE_ACCOUNT, 'payload');

@@ -14,17 +14,12 @@ class Container extends Component {
     }
     render() {
         return (
-<<<<<<< HEAD
             <div className="container-fluid">
                 
                     <SideBar />
               
                 
 
-=======
-            <div className="page-container">
-                <LoginPage />
->>>>>>> e72d51b124a7e654389560a58ce7ce0086a2a0d4
             </div>
         )
     }
