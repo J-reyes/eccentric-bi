@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-<<<<<<< HEAD:src/components/dashboard/tile-container.js
-// import ChartTile from './../tiles/chart-tile';
-=======
 import BarTile from './../tiles/bar-tile';
->>>>>>> 69aeed2e876a9a2bfc7fef69465505aeb1ee58e3:src/components/dashboard/dashboard.js
 import ReactDOM from 'react-dom';
 import Dragula from 'react-dragula';
 
@@ -33,21 +29,12 @@ class Dashboard extends Component {
                     {
                         this.props.tiles.map((item, index) =>
                             <div key={index} className=" container tile-container col-sm-3">
-<<<<<<< HEAD:src/components/dashboard/tile-container.js
-                                {/* <ChartTile /> */}
-                                {/* <DashboardTile title={item.title} content={item.content} /> */}
-=======
                                 <BarTile />
->>>>>>> 69aeed2e876a9a2bfc7fef69465505aeb1ee58e3:src/components/dashboard/dashboard.js
                             </div>
                         )}
                 </div>
                 <div id="large-tiles" className="row col-sm-12" >
-<<<<<<< HEAD:src/components/dashboard/tile-container.js
-                    {/* <div className="specialContainer" ><ChartTile /></div> */}
-=======
                     <div className="specialContainer" ><BarTile /></div>
->>>>>>> 69aeed2e876a9a2bfc7fef69465505aeb1ee58e3:src/components/dashboard/dashboard.js
                 </div>
 
                 <div className="specialContainer" ><LargeTile map={this.state.img} /></div>
