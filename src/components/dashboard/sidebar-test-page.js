@@ -6,14 +6,22 @@ import TileContainer from './../tiles/tile-container'
 
 
 import WidgetDropdown from './widget-dropdown'
-
+import axios from 'axios';
+import * as actionCreators from '../redux/actions/index';
+import { connect } from 'react-redux'
 
 
 class SideBarTest extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+        }
     }
+    
+    componentDidMount = () => {
+        this.props.loadBitcoin();
+    }
+
     render() {
         return (
             <div>
@@ -61,4 +69,6 @@ class SideBarTest extends Component {
     }
 }
 
-export default SideBarTest;
+
+
+export default connect(null, actionCreators)(SideBarTest);

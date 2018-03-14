@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const makeActionCreator = (type, ...argNames) => (...args) => {
     let action = { type };
     argNames.forEach( (arg, index) => {
@@ -26,7 +28,12 @@ export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const ADD_TILE = 'ADD_TILE';
 export const ADD_WIDGET = 'ADD_WIDGET';
+export const CHANGE_BITCOIN = 'CHANGE_BITCOIN';
 
+export const loadBitcoin = () => dispatch => axios.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+                                                .then(response => {
+                                                    dispatch(changeBitcoin(`$${response.data.bpi.USD.rate}`))
+                                                })
 
 
 
@@ -37,3 +44,4 @@ export const addToDo = makeActionCreator(ADD_TODO, 'payload');
 export const removeToDo = makeActionCreator(REMOVE_TODO, "payload");
 export const addTile = makeActionCreator(ADD_TILE, "payload");
 export const addWidget = makeActionCreator(ADD_WIDGET, 'payload');
+export const changeBitcoin = makeActionCreator(CHANGE_BITCOIN, 'payload');
