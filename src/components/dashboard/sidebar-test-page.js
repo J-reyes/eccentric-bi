@@ -22,6 +22,7 @@ class SideBarTest extends Component {
     
     componentDidMount = () => {
         this.props.loadBitcoin();
+        this.props.loadWeather();
     }
 
     // componentDidMount = () => {
