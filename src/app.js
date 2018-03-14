@@ -23,7 +23,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <WidgetDropdown />
+    <Container />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

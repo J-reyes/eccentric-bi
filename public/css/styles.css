@@ -17,6 +17,7 @@
     padding: 0.5em;
     border: 1px solid black;
 }
+
 .tiles {
     display: flex;
     flex-direction: row;

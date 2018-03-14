@@ -5,6 +5,7 @@ import Title from './title';
 import SideBar from './sidebar/sidebar'
 import LoginPage from './user-login/login-page'
 import Dashboard from './dashboard/dashboard';
+import DashBoardPage from './dashboard/dasboard-page';
 import NavBar from './navbar/navbar';
 import UserProfile from './user-profile/user-profile';
 
@@ -20,15 +21,14 @@ class Container extends Component {
         return (
 
             <div className="container-fluid">
-                <NavBar />
-                <div>
+                <div className="row">
                 <SideBar className="pull-left" />
-                <div className="pull-center" >
-                    <Title />
-                    <NavBar />
+                <Title />
+                <NavBar />
                 </div>
-               
-                <DashBoardPage />
+                <div>
+                    
+
                 </div>
 
                 <Switch>
