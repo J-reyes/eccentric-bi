@@ -22,11 +22,11 @@ class SideBarTest extends Component {
 
                 <div className="container-fluid">
                     <div className="row ">
-                        <div className="col-md-3" style={{ padding: 0 }} >
+                        <div className="col-md-2" style={{ padding: 0 }} >
                             <SideBar />
                         </div>
 
-                        <div className="col-md-9"><span className="pull-right"></span>
+                        <div className="col-md-10"><span className="pull-right"></span>
                             <div className="row">
                                 <div className="col-md-12">
                                     <WidgetDropdown />
@@ -42,16 +42,7 @@ class SideBarTest extends Component {
 
                             </div>
 
-                            <div className="row" id="tiles-div">
-
-                                BLUE BAR
-                            </div>
-                            <div className="row" id="tiles-div">
-                                BLUE BAR
-                            </div>
-                            <div className="row" id="tiles-div">
-                                BLUE BAR
-                            </div>
+                          
                         </div>
                     </div>
                 </div>
