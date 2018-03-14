@@ -61,3 +61,15 @@
     padding: 2em;
     margin: 0.5em
 }
+#sidebar {
+    width: 100%;
+}
+#logo {
+    background: black;
+    width: 100%;
+    height: 30%;
+}
+#image {
+    width: 120%;
+    height: 50%;
+}
