@@ -21,7 +21,7 @@ class SideBar extends Component {
 
             
             
-            <div className="col-md-3" id="sidebar" style={{ background: '#ff5b57', color: '#FFF', width: 220, height: 1100, overflowY: 'scroll', WebKitOverflowScrolling: 'auto'  }}>
+            <div id="sidebar" style={{ background: '#ff5b57', color: '#FFF', height: 1100  }}>
                 <a href=""> <div className="logo"><img src="http://lbd-pro-react.creative-tim.com/static/media/logo.5d5d9eef.svg" alt=""/></div></a>
                 <a href="#" className="simple-text logo-normal" >Eccentric</a>
                     <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='dashboard'>

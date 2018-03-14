@@ -9,7 +9,10 @@ const TileDisplay = props => (
             props.tileList.map((tile, index) => {
                 const TileComponent = tile;
                 return (
-                    <TileComponent key={index}/>
+                    <div key={index} className="col-sm-6">
+                        <TileComponent />
+                    </div>
+                    
                 )
             })
         }

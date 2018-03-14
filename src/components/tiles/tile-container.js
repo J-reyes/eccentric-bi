@@ -4,7 +4,7 @@ import TileDisplay from './tile-container-helper/tile-display'
 import TileDropdown from './tile-container-helper/tile-dropdown'
 
 const TileContainer = props => (
-    <div>
+    <div className="main-container" >
         <TileDropdown />
         <TileDisplay />
     </div>
