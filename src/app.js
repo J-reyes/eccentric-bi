@@ -23,7 +23,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <Container />
+    <TileContainer />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

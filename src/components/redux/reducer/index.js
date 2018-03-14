@@ -9,16 +9,6 @@ import tileContainer from './tile-container-reducer'
 const initialState = {
     searchField: '',
     login: { username: '', password: '' },
-    tiles: [
-        {
-            title: 'Title',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit, sed hic ipsa debitis magnam inventore saepe ullam.'
-        },
-        {
-            title: 'Title',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nulla expedita nam saepe explicabo non atque aliquid.'
-        }
-    ],
     register: []
 
 }
