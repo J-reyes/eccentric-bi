@@ -19,7 +19,6 @@ class Container extends Component {
     }
     render() {
         return (
-
             <div className="container-fluid">
                 <div className="row">
                 <SideBar className="pull-left" />
@@ -30,15 +29,15 @@ class Container extends Component {
                     
 
                 </div>
+              
+
 
                 <Switch>
                     <Route exact path="/" render={() => <LoginPage />} />
                     <Route path="/dashboard" render={() => <Dashboard />} />
                     <Route path="/userprofile" render={() => <UserProfile />} />
                 </Switch>
-
             </div>
-
 
         )
     }

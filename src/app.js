@@ -18,12 +18,14 @@ import UserProfile from './components/user-profile/user-profile';
 import TileContainer from './components/tiles/tile-container'
 
 import 'bootstrap/dist/css/bootstrap.css';
+import DashBoardPage from './components/dashboard/dasboard-page';
+import SideBarTest from './components/dashboard/sidebar-test-page';
 
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <TileContainer />
+    <SideBarTest />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );
