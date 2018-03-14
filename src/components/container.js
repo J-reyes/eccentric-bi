@@ -4,7 +4,7 @@ import { Link, Switch, Route } from 'react-router-dom';
 import Title from './title';
 import SideBar from './sidebar/sidebar'
 import LoginPage from './user-login/login-page'
-import Dashboard from './dashboard/dashboard';
+import DashBoardPage from './dashboard/dasboard-page';
 import NavBar from './navbar/navbar';
 import UserProfile from './user-profile/user-profile';
 
@@ -18,27 +18,31 @@ class Container extends Component {
     }
     render() {
         return (
-
             <div className="container-fluid">
-                <NavBar />
+
+
                 <div>
-                <SideBar className="pull-left" />
-                <div className="pull-center" >
-                    <Title />
+                    <SideBar />
+
+                </div>
+                <div className="contaner-fluid pull-right">
                     <NavBar />
                 </div>
-               
-                <DashBoardPage />
+                <div >
+                    <Title />
+
+
+
                 </div>
+                <DashBoardPage />
+
 
                 <Switch>
                     <Route exact path="/" render={() => <LoginPage />} />
                     <Route path="/dashboard" render={() => <Dashboard />} />
                     <Route path="/userprofile" render={() => <UserProfile />} />
                 </Switch>
-
             </div>
-
 
         )
     }

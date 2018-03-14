@@ -18,12 +18,13 @@ import UserProfile from './components/user-profile/user-profile';
 import TileContainer from './components/tiles/tile-container'
 
 import 'bootstrap/dist/css/bootstrap.css';
+import DashBoardPage from './components/dashboard/dasboard-page';
 
 
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-    <WidgetDropdown />
+    <Container />
     </BrowserRouter></Provider>
             , document.getElementById('app')
 );

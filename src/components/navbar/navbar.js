@@ -15,8 +15,8 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div className="container-fluid pull-right">
-                <div>
+            <div className="container-fluid">
+                <div className="row">
                     <input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} />
                     <button onClick={() => this.props.sendSearch(this.state.searchValue)} >Enter</button>
                 </div>
