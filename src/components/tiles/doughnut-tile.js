@@ -4,13 +4,13 @@ import { connect } from 'react-redux'
 
 
 const DoughnutTile = props => 
-<div>
+<div className="card card-stats">
     <h3>{props.label}</h3>
     <Doughnut data={props.data} height={props.height}/>
 </div>;
 
 DoughnutTile.defaultProps = {
-    height: 100,
+    height: 185,
     label: "Doughnut Data"
 }
 

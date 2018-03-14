@@ -22,8 +22,10 @@ class ToDoInput extends Component {
         return (
             <div className="form-group">
                 <label>To Do Item</label>
-                <input type="text" className="form-control" value={this.state.text} onChange={(e) => this.setState({text: e.target.value})}/>
-                <button className="btn btn-primary" onClick={this._sendToStore} >Enter</button>
+                <div className="form-inline">
+                    <input type="text" className="form-control" value={this.state.text} onChange={(e) => this.setState({ text: e.target.value })} />
+                    <button className="btn btn-primary" onClick={this._sendToStore} >Enter</button>
+                </div>
             </div>
         )
     }
