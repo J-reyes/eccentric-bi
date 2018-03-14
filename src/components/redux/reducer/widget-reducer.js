@@ -1,4 +1,4 @@
-import { ADD_WIDGET } from '../actions/index';
+import { ADD_WIDGET, CHANGE_BITCOIN } from '../actions/index';
 
 import WeatherWidget from './../../widgets/weather-widget';
 import BitcoinWidget from './../../widgets/bitcoin-widget';
@@ -14,7 +14,8 @@ export const REDWOODWIDGET = 'REDWOODWIDGET';
 
 
 const widgetState = {
-    widgetList: []
+    widgetList: [],
+    bitcoin: ''
 }
 
 const widgets = {
@@ -33,6 +34,11 @@ const widgetContainer = (state = widgetState, action) => {
                 widgetList: [
                     ...state.widgetList, widgets[action.payload]
                 ]
+            }
+        case CHANGE_BITCOIN: 
+            return {
+                ...state, 
+                bitcoin: action.payload
             }
         default:
             return state;

@@ -4,45 +4,55 @@ import NavBar from '../navbar/navbar'
 import Title from '../title'
 import TileContainer from './../tiles/tile-container'
 
+import ReactDOM from 'react-dom';
+import Dragula from 'react-dragula';
 
 import WidgetDropdown from './widget-dropdown'
-
+import axios from 'axios';
+import * as actionCreators from '../redux/actions/index';
+import { connect } from 'react-redux'
 
 
 class SideBarTest extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+        }
     }
+    
+    componentDidMount = () => {
+        this.props.loadBitcoin();
+    }
+
+    // componentDidMount = () => {
+    //     var specialContainer = ReactDOM.findDOMNode(this);
+    //     Dragula([specialContainer]);
+    // }
+
     render() {
         return (
             <div>
-
-                <NavBar />
-
+                <div>
+                    <NavBar />
+                </div>
+                
                 <div className="container-fluid">
                     <div className="row ">
                         <div className="col-md-2" style={{ padding: 0 }} >
                             <SideBar />
                         </div>
 
-                        <div className="col-md-10"><span className="pull-right"></span>
-                            <div className="row">
+                        <div className="col-md-10 dashboard-container">
+                            <div className="row widget-row">
                                 <div className="col-md-12">
                                     <WidgetDropdown />
                                 </div>
-
-
                             </div>
-
                             <div className="row">
                                 <div className="col-md-12">
                                     <TileContainer />
                                 </div>
-
                             </div>
-
-                          
                         </div>
                     </div>
                 </div>
@@ -52,4 +62,6 @@ class SideBarTest extends Component {
     }
 }
 
-export default SideBarTest;
+
+
+export default connect(null, actionCreators)(SideBarTest);

@@ -19,9 +19,12 @@ class NavBar extends Component {
         return (
             <div >
                 <div className="row">
-                    <div className="col-md-12" style={{ background: 'salmon' }}>
-                        <span className="pull-right"><button onClick={() => this.props.sendSearch(this.state.searchValue)} >Enter</button></span>
-                        <span className="pull-right"><input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} /></span>
+                    <div className="col-md-12" style={{ background: '#ff5b57', margin: 0, padding: 0 }}>
+                        <span className="pull-right">
+                            <button onClick={() => this.props.sendSearch(this.state.searchValue)} >Enter</button>
+                            <input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} />
+                        </span>
+
                     </div>
                 </div>
             </div>

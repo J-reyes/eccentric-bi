@@ -23,10 +23,11 @@ class WidgetDropdown extends Component {
         return (
             <div className="main-container">
                 <div className="widget-container">
-                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                        <DropdownToggle caret>
-                            Widgets
-                        </DropdownToggle>
+                        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                            <DropdownToggle caret>
+                                Widgets
+                            </DropdownToggle>
+                    
                         <DropdownMenu>
                             <DropdownItem onClick={() => this.props.createWidget(WEATHERWIDGET) } >Weather</DropdownItem>
                             <DropdownItem onClick={() => this.props.createWidget(BITCOINWIDGET) } >Bitcoin</DropdownItem>
@@ -35,13 +36,13 @@ class WidgetDropdown extends Component {
                             <DropdownItem onClick={() => this.props.createWidget(REDWOODWIDGET) } >Redwood</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                    <div className="display-container">
+                    <div className="display-container" style={{margin: 1}} >
                         {
                             this.props.widgetList.map((widget, index) =>
                             {
                                 const WidgetComponent = widget;
                                 return (
-                                    <div key={index}  className="col-sm-3">
+                                    <div key={index}  className="col-sm-2 card" style={{margin: 5}} >
                                         <WidgetComponent />
                                     </div>
                                     
