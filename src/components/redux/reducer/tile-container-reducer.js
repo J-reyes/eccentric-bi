@@ -1,7 +1,7 @@
 import { ADD_TILE } from '../actions/index';
-import BarTile from '../../tiles/bar-tile';
-import DoughnutTile from '../../tiles/doughnut-tile'
-import ToDoTile from '../../tiles/todo-tile'
+import BarTile from '../../tiles/tile-components/bar-tile';
+import DoughnutTile from '../../tiles/tile-components/doughnut-tile'
+import ToDoTile from '../../tiles/tile-components/todo-tile'
 
 export const BARCHART = 'BARCHART';
 export const DOUGHNUTCHART = 'DOUGHNUTCHART';
