@@ -30,8 +30,8 @@
     height: 14em;
     margin: 0.5em;
     padding: 0.5em;
-    border: 1px solid black;
 }
+
 #tiles-div {
     margin-top: 15px;
     height: 25vh;
@@ -47,4 +47,17 @@
 }
 #button {
     margin-top: 5px;
+}
+
+.widget-row {
+    min-height: 20em
+}
+
+.dashboard-container {
+    background-color: whitesmoke;
+}
+
+.dashboard-tile {
+    padding: 2em;
+    margin: 0.5em
 }

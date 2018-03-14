@@ -9,7 +9,7 @@ class BarTile extends Component {
     }
     render() { 
         return (
-            <div className="card card-stats">
+            <div className="card card-stats dashboard-tile">
                 <Bar data={this.props.barData} height={this.props.height} />
             </div>  
         )

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 
 const DoughnutTile = props => 
-<div className="card card-stats">
+<div className="card card-stats dashboard-tile">
     <h3>{props.label}</h3>
     <Doughnut data={props.data} height={props.height}/>
 </div>;

@@ -9,7 +9,7 @@ const TileDisplay = props => (
             props.tileList.map((tile, index) => {
                 const TileComponent = tile;
                 return (
-                    <div key={index} className="col-sm-6">
+                    <div key={index} className="col-sm-6" style={{margin: 0}} >
                         <TileComponent />
                     </div>
                     
