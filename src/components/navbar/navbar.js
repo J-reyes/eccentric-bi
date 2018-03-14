@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addSearchItem } from './../redux/actions/index'
 
+import Title from '../title';
+
 
 class NavBar extends Component {
     constructor(props) {
@@ -15,10 +17,12 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <div >
                 <div className="row">
-                    <input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} />
-                    <button onClick={() => this.props.sendSearch(this.state.searchValue)} >Enter</button>
+                    <div className="col-md-12" style={{ background: 'salmon' }}>
+                        <span className="pull-right"><button onClick={() => this.props.sendSearch(this.state.searchValue)} >Enter</button></span>
+                        <span className="pull-right"><input type="text" placeholder="Search ..." value={this.state.searchValue} onChange={(e) => { this.setState({ searchValue: e.target.value }) }} /></span>
+                    </div>
                 </div>
             </div>
 

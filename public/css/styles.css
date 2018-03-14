@@ -17,6 +17,7 @@
     padding: 0.5em;
     border: 1px solid black;
 }
+
 .tiles {
     display: flex;
     flex-direction: row;
@@ -30,4 +31,20 @@
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid black;
+}
+#tiles-div {
+    margin-top: 15px;
+    height: 25vh;
+    width: auto;
+    background: blue;
+}
+#graph-div {
+    margin-top: 20px;
+    height: 35vh;
+    width: auto;
+    background: blue;
+
+}
+#button {
+    margin-top: 5px;
 }
