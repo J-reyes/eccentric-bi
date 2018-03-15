@@ -6,31 +6,32 @@ import { connect } from 'react-redux';
 class TileDisplay extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {}
     }
 
     componentDidMount = () => {
-        var specialContainer = ReactDOM.findDOMNode(this);
-        Dragula([specialContainer]);
+        var container = ReactDOM.findDOMNode(this);
+        Dragula([container]);
     }
 
-    render() { 
-        return ( <div className="row">
-        {
-            this.props.tileList.map((tile, index) => {
-                const TileComponent = tile;
-                return (
-                    <div key={index} className="col-sm-6" style={{margin: 0}} >
-                        <TileComponent />
-                    </div>
-                    
-                )
-            })
-        }
-    </div> )
+    render() {
+        return (
+            <div className="row">
+                {
+                    this.props.tileList.map((tile, index) => {
+                        const TileComponent = tile;
+                        return (
+                            <div key={index} className="col-sm-6">
+                                <TileComponent />
+                            </div>
+
+                        )
+                    })
+                }
+            </div>)
     }
 }
- 
+
 const mapStateToProps = state => ({
     tileList: state.tileContainer.tileList
 })
@@ -46,7 +47,7 @@ export default connect(mapStateToProps)(TileDisplay);
 //                     <div key={index} className="col-sm-6" style={{margin: 0}} >
 //                         <TileComponent />
 //                     </div>
-                    
+
 //                 )
 //             })
 //         }

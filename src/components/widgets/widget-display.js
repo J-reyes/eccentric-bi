@@ -11,8 +11,8 @@ class WidgetDisplay extends Component {
     }
 
     componentDidMount = () => {
-        var specialContainer = ReactDOM.findDOMNode(this);
-        Dragula([specialContainer]);
+        var container = ReactDOM.findDOMNode(this);
+        Dragula([container]);
     }
 
     render() {
@@ -22,7 +22,7 @@ class WidgetDisplay extends Component {
                     this.props.widgetList.map((widget, index) => {
                         const WidgetComponent = widget;
                         return (
-                            <div key={index} className="col-sm-3 card">
+                            <div key={index} className="col-sm-3">
                                 <WidgetComponent />
                             </div>
                         )
