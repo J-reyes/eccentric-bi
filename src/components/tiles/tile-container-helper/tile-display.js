@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-
+import ReactDOM from 'react-dom';
+import Dragula from 'react-dragula';
 import { connect } from 'react-redux';
 
+class TileDisplay extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {  }
+    }
 
-const TileDisplay = props => (
-    <div className="row">
+    componentDidMount = () => {
+        var specialContainer = ReactDOM.findDOMNode(this);
+        Dragula([specialContainer]);
+    }
+
+    render() { 
+        return ( <div className="row">
         {
-            props.tileList.map((tile, index) => {
+            this.props.tileList.map((tile, index) => {
                 const TileComponent = tile;
                 return (
                     <div key={index} className="col-sm-6" style={{margin: 0}} >
@@ -16,13 +27,36 @@ const TileDisplay = props => (
                 )
             })
         }
-    </div>
-)
-
-
+    </div> )
+    }
+}
+ 
 const mapStateToProps = state => ({
     tileList: state.tileContainer.tileList
 })
 
-
 export default connect(mapStateToProps)(TileDisplay);
+
+// const TileDisplay = props => (
+//     <div className="row">
+//         {
+//             props.tileList.map((tile, index) => {
+//                 const TileComponent = tile;
+//                 return (
+//                     <div key={index} className="col-sm-6" style={{margin: 0}} >
+//                         <TileComponent />
+//                     </div>
+                    
+//                 )
+//             })
+//         }
+//     </div>
+// )
+
+
+// const mapStateToProps = state => ({
+//     tileList: state.tileContainer.tileList
+// })
+
+
+// export default connect(mapStateToProps)(TileDisplay);
