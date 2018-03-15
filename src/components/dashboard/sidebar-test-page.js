@@ -7,7 +7,8 @@ import TileContainer from './../tiles/tile-container'
 import ReactDOM from 'react-dom';
 import Dragula from 'react-dragula';
 
-import WidgetDropdown from './widget-dropdown'
+
+import WidgetContainer from './../widgets/widget-container';
 import axios from 'axios';
 import * as actionCreators from '../redux/actions/index';
 import { connect } from 'react-redux'
@@ -45,7 +46,7 @@ class SideBarTest extends Component {
                         <div className="col-md-10 dashboard-container">
                             <div className="row widget-row">
                                 <div className="col-md-12">
-                                    <WidgetDropdown />
+                                    <WidgetContainer />
                                 </div>
                             </div>
                             <div className="row">
