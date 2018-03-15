@@ -13,9 +13,9 @@ class UserLogin extends Component {
     render() { 
         return ( 
             <div className="container-fluid">
-                <div className="row">
+                <div id="login-box" className="row">
                 
-                <div id="login-box" className="col-sm-4 col-sm-offset-4">
+                <div  className="col-sm-4 col-sm-offset-4">
                     <div className="form-group">
                         <label>User Name</label>
                         <input type="text" className="form-control" value={this.state.username} onChange={(e) => { this.setState({username: e.target.value })}} />
@@ -24,11 +24,11 @@ class UserLogin extends Component {
                         <label>Password</label>
                         <input type="password" className="form-control" value={this.state.password} onChange={(e) => { this.setState({password: e.target.value })}}/>
                     </div>
-                    <div className="row">
-                        <button className="btn btn-info pull-right" onClick={ (e) => { this.props.sendLogin(this.state)}} >Log In</button>
+                    <div className="row" style={{display: 'flex', justifyContent: 'flex-end', marginRight: 0}}>
+                        <button className="btn btn-info pull-right btn-lg" onClick={ (e) => { this.props.sendLogin(this.state)}} >Log In</button>
                     </div>
-                    <div className="row">
-                        <a href="#" className="col-sm-offset-3" > New Users Register Here </a>
+                    <div className="row" style={{display: 'flex', justifyContent: 'center', marginTop: 20}}>
+                        <a href="#"  > New Users Register Here </a>
                     </div>
                 </div>
                 
