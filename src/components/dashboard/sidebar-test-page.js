@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideBar from '../sidebar/sidebar'
-import NavBar from '../navbar/navbar'
+import EccentricNavBar from '../navbar/navbar'
 import Title from '../title'
 import TileContainer from './../tiles/tile-container'
 
@@ -46,8 +46,8 @@ class SideBarTest extends Component {
 
                         <div className="col-md-10 dashboard-container">
                             <div className="row">
-                                <div className="col-md-12">
-                                    <NavBar />
+                                <div className="col-md-12" style={{padding: 0, borderRadius: 0}} >
+                                    <EccentricNavBar />
                                 </div>
 
                             </div>

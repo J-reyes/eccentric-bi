@@ -17,7 +17,7 @@ import Button from 'react-bootstrap/lib/Button';
 import SvgIcon from 'react-icons-kit';
 import { search } from 'react-icons-kit/icomoon/search';
 
-class NavBar extends Component {
+class EccentricNavBar extends Component {
     constructor(props) {
 
         super(props);
@@ -34,7 +34,7 @@ class NavBar extends Component {
 
             <div className="row">
                 <div className="col-md-12">
-                    <Navbar inverse collapseOnSelect>
+                    <Navbar inverse collapseOnSelect style={{borderRadius: 0, background: 'gold'}}>
                         <Navbar.Header>
                             <Navbar.Brand>
                                 <a href="#brand">Eccentric</a>
@@ -100,4 +100,4 @@ const mapDispatchToProps = dispatch => ({
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default connect(mapStateToProps, mapDispatchToProps)(EccentricNavBar);
