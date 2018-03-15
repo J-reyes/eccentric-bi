@@ -24,7 +24,6 @@ class EccentricNavBar extends Component {
         this.state = {
             searchValue: ''
         }
-        console.log(this.props)
     }
 
     render() {

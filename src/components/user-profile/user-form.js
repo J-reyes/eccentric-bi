@@ -85,7 +85,7 @@ class UserForm extends Component {
                                                     </div>
                                                     <div className="col-md-4">
                                                         <div className="form-group">
-                                                            <labe className="control-label"> POSTAL CODE </labe>
+                                                            <label className="control-label"> POSTAL CODE </label>
                                                             <input type="text" className="form-control" placeholder="Postal Code" />
                                                         </div>
                                                     </div>

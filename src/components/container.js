@@ -5,7 +5,6 @@ import Title from './title';
 import SideBar from './sidebar/sidebar'
 import LoginPage from './user-login/login-page'
 import Dashboard from './dashboard/dashboard';
-import DashBoardPage from './dashboard/dasboard-page';
 import NavBar from './navbar/navbar';
 import UserProfile from './user-profile/user-profile';
 
@@ -19,19 +18,7 @@ class Container extends Component {
     }
     render() {
         return (
-            <div className="container-fluid">
-                <div className="row">
-                <SideBar className="pull-left" />
-                <Title />
-                <NavBar />
-                </div>
-                <div>
-                    
-
-                </div>
-              
-
-
+            <div>
                 <Switch>
                     <Route exact path="/" render={() => <LoginPage />} />
                     <Route path="/dashboard" render={() => <Dashboard />} />
