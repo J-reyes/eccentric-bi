@@ -4,6 +4,7 @@ import charts from './chart-reducer'
 import toDo from './todo-reducer'
 import widgetContainer from './widget-reducer'
 import tileContainer from './tile-container-reducer'
+import { reducer as formReducer } from 'redux-form'
 
 
 const initialState = {
@@ -56,7 +57,8 @@ const rootReducer = combineReducers({
     charts,
     toDo,
     widgetContainer,
-    tileContainer
+    tileContainer,
+    form: formReducer
 })
 
 
