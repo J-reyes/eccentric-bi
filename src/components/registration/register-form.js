@@ -4,7 +4,7 @@ import { user } from 'react-icons-kit/icomoon/user';
 import { statsDots } from 'react-icons-kit/icomoon/statsDots';
 import { headphones } from 'react-icons-kit/icomoon/headphones';
 
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { createAccount } from './../redux/actions/index';
 
@@ -35,7 +35,7 @@ class RegistrationForm extends Component {
         if (this.state.success) {
             return (
                 <Redirect to={{
-                    pathname: '/',
+                    pathname: '/login',
                     state: { newUser: true }
                 }}/>
             );
@@ -56,7 +56,7 @@ class RegistrationForm extends Component {
                     </div>
                     <label>Username</label>
                     <div className="form-group">
-                        <input type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.lastName} />
+                        <input type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.username} />
                     </div>
                     <label>Email</label>
                     <div className="form-group">
@@ -73,9 +73,10 @@ class RegistrationForm extends Component {
 
 
                     <button className="btn btn-info" type="submit">Submit</button>
-
                 </div>
+                <Link to="/login">TEST</Link>
             </form>
+            
 
         )
     }

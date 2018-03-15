@@ -73,7 +73,7 @@ class UserLogin extends Component {
                         </div>
 
                         {
-                            this.props.location.state.newUser ? <div>Welcome to our app</div> : null
+                             !this.props.location.state ? null : this.props.location.state.newUser ? <div>Welcome to our app</div> : null
                         }
 
                         {

@@ -9,12 +9,13 @@ class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.state = {}
+        console.log(this.props.location)
     }
     render() {
         return (
             <div className="container-fluid">
                 <Title/>
-                <UserLogin/>
+                <UserLogin location={this.props.location}/>
             </div>
 
 
