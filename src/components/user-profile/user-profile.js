@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 // import navBar from navbar folder
-import NavBar from '../navbar/navbar'
+import EccentricNavBar from '../navbar/navbar'
 
 // import UerForm
 import UserForm from './user-form'
+
+import SideBar from '../sidebar/sidebar'
 
 class UserProfile extends Component {
     constructor(props) {
@@ -14,13 +16,18 @@ class UserProfile extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="container-fluid">
-                    <NavBar />
-                </div>
+              
 
                 <div className="row">
-
+               
+                    <div className="col-md-2" style={{ padding: 0 }} >
+                        <SideBar />
+                    </div>
+                    <div className="col-md-10" style={{ padding: 0 }}>
+                    <EccentricNavBar  />
                     <UserForm />
+                    </div>
+                   
 
 
                 </div>

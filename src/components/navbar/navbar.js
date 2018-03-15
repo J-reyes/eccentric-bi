@@ -33,46 +33,58 @@ class EccentricNavBar extends Component {
 
             <div className="row">
                 <div className="col-md-12">
-                    <Navbar inverse collapseOnSelect style={{borderRadius: 0, background: 'gold'}}>
-                        <Navbar.Header>
-                            <Navbar.Brand>
-                                <a href="#brand">Eccentric</a>
-                            </Navbar.Brand>
-                            <Navbar.Toggle />
-                        </Navbar.Header>
+                    <Navbar inverse collapseOnSelect style={{ borderRadius: 0, background: 'gold' }}>
+
                         <Navbar.Collapse>
                             <Navbar.Form pullLeft>
-                                <FormGroup>
-                                <SvgIcon size={30} icon={search} />
+                                <FormGroup id="search-icon">
+                                    <SvgIcon size={30} icon={search} />
                                 </FormGroup>
                                 <FormGroup>
-                                
+
                                     <FormControl type="text" placeholder="Search" />
                                 </FormGroup>{' '}
-                                <Button type="submit">Submit</Button>
+                                <Button type="submit" style={{fontSize: 14}}  >Submit</Button>
                             </Navbar.Form>
-                            <Nav >
 
-                                <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+                            <Nav className="pull-right">
+                                <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown" style={{fontSize: 14}} >
                                     <MenuItem eventKey={3.1}>Action</MenuItem>
                                     <MenuItem eventKey={3.2}>Another action</MenuItem>
                                     <MenuItem eventKey={3.3}>Something else here</MenuItem>
                                     <MenuItem divider />
                                     <MenuItem eventKey={3.3}>Separated link</MenuItem>
+
                                 </NavDropdown>
                             </Nav>
                             <Nav className="pull-right">
-                                <NavItem eventKey={1} href="#">
-                                    Link Right
-                                      </NavItem>
+                                <NavDropdown eventKey={4} title="Dropdown" id="basic-nav-dropdown" style={{fontSize: 14}} >
+                               
+                                    <MenuItem eventKey={4.1}>Action</MenuItem>
+                                    <MenuItem eventKey={4.2}>Another action</MenuItem>
+                                    <MenuItem eventKey={4.3}>Something else here</MenuItem>
+                                    <MenuItem divider />
+                                    <MenuItem eventKey={4.4}>Separated link</MenuItem>
 
+                                </NavDropdown>
                             </Nav>
                             <Nav className="pull-right">
+                                <NavDropdown eventKey={5} title="Dropdown" id="basic-nav-dropdown" style={{fontSize: 14}} >
+                                    <MenuItem eventKey={5.1}>Action</MenuItem>
+                                    <MenuItem eventKey={5.2}>Another action</MenuItem>
+                                    <MenuItem eventKey={5.3}>Something else here</MenuItem>
+                                    <MenuItem divider />
+                                    <MenuItem eventKey={5.4}>Separated link</MenuItem>
+
+                                </NavDropdown>
+                            </Nav>
+                            <Nav className="pull-right" style={{fontSize: 14}} >
                                 <NavItem eventKey={2} href="#">
                                     Link Right
                                       </NavItem>
 
                             </Nav>
+                          
                         </Navbar.Collapse>
                     </Navbar>;
                 </div>

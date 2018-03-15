@@ -34,8 +34,8 @@ class SideBar extends Component {
                        
                         
                         <Nav id='header'>
-                            <NavIcon  ><img  id="image" src="https://vignette.wikia.nocookie.net/nickelodeon/images/3/33/Image_by_daggett_beaver-d7at1km.jpg/revision/latest?cb=20160902041236" alt=""/></NavIcon>
-                            <NavText id="user"  style={{fontSize: 18, paddingLeft: 20 }} >USER</NavText>
+                            <NavIcon  ><img className="img-circle" id="image" src="https://vignette.wikia.nocookie.net/nickelodeon/images/3/33/Image_by_daggett_beaver-d7at1km.jpg/revision/latest?cb=20160902041236" alt=""/></NavIcon>
+                            <NavText id="user"  style={{fontSize: 18, paddingLeft: 45 }}>Somebody's page</NavText>
                             <Nav id="myProfile">
                                 <NavIcon></NavIcon>
                                 <NavText> My Profile </NavText>
