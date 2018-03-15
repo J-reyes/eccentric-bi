@@ -28,12 +28,13 @@ class UserLogin extends Component {
         event.preventDefault();
         if (this.isValid()) {
             this.setState({
-                success: !this.state.success
+                success: !this.state.success,
+                reject: false
             })
         }
         else {
             this.setState({
-                reject: !this.state.rejected
+                reject: true
             })
         }
     }
