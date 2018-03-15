@@ -13,7 +13,8 @@ class LoginPage extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <UserLogin />
+                <Title/>
+                <UserLogin/>
             </div>
 
 
