@@ -56,7 +56,7 @@ const rootReducer = combineReducers({
     charts,
     toDo,
     widgetContainer,
-    tileContainer,
+    tileContainer
 })
 
 
