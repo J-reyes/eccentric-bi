@@ -11,22 +11,16 @@ import NavBar from '../navbar/navbar';
 class Registration extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {}
     }
-    render() { 
-        return ( 
+    render() {
+        return (
             <div className="container-fluid">
-                <div className="row pull-right">
-                <NavBar />
-                </div>
-
                 <Header />
-
                 <RegistrationForm />
-
-            </div> 
+            </div>
         )
     }
 }
- 
+
 export default Registration;

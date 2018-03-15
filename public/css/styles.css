@@ -61,9 +61,11 @@
     padding: 2em;
     margin: 0.5em
 }
+
 #sidebar {
     width: 100%;
 }
+
 #logo {
     background: black;
     width: 100%;
@@ -140,4 +142,8 @@ textarea {
     border-radius: 4px;
     color: #565656;
     padding: 8px 12px;
+}
+
+#login-box {
+    margin: 20px;
 }
