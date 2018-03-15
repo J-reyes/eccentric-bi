@@ -7,7 +7,8 @@ import TileContainer from './../tiles/tile-container'
 import ReactDOM from 'react-dom';
 import Dragula from 'react-dragula';
 
-import WidgetDropdown from './widget-dropdown'
+
+import WidgetContainer from './../widgets/widget-container';
 import axios from 'axios';
 import * as actionCreators from '../redux/actions/index';
 import { connect } from 'react-redux'
@@ -22,6 +23,7 @@ class SideBarTest extends Component {
 
     componentDidMount = () => {
         this.props.loadBitcoin();
+        this.props.loadWeather();
     }
 
     // componentDidMount = () => {
@@ -51,7 +53,7 @@ class SideBarTest extends Component {
                             </div>
                             <div className="row widget-row">
                                 <div className="col-md-12">
-                                    <WidgetDropdown />
+                                    <WidgetContainer />
                                 </div>
                             </div>
                             <div className="row">

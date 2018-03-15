@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import Dragula from 'react-dragula';
 import { connect } from 'react-redux';
 
-class TileDisplay extends Component {
+
+class WidgetDisplay extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -18,46 +19,44 @@ class TileDisplay extends Component {
         return (
             <div className="row">
                 {
-                    this.props.tileList.map((tile, index) => {
-                        const TileComponent = tile;
+                    this.props.widgetList.map((widget, index) => {
+                        const WidgetComponent = widget;
                         return (
-                            <div key={index} className="col-sm-6">
-                                <TileComponent />
+                            <div key={index} className="col-sm-3">
+                                <WidgetComponent />
                             </div>
-
                         )
                     })
                 }
-            </div>)
+            </div>
+        )
     }
 }
 
 const mapStateToProps = state => ({
-    tileList: state.tileContainer.tileList
+    widgetList: state.widgetContainer.widgetList
 })
 
-export default connect(mapStateToProps)(TileDisplay);
+export default connect(mapStateToProps)(WidgetDisplay);
 
-// const TileDisplay = props => (
+
+// const WidgetDisplay = props => (
 //     <div className="row">
 //         {
-//             props.tileList.map((tile, index) => {
-//                 const TileComponent = tile;
+//             props.widgetList.map((widget, index) => {
+//                 const WidgetComponent = widget;
 //                 return (
-//                     <div key={index} className="col-sm-6" style={{margin: 0}} >
-//                         <TileComponent />
+//                     <div key={index} className="col-sm-3 card">
+//                         <WidgetComponent />
 //                     </div>
-
 //                 )
 //             })
 //         }
 //     </div>
 // )
 
-
 // const mapStateToProps = state => ({
-//     tileList: state.tileContainer.tileList
+//     widgetList: state.widgetContainer.widgetList
 // })
 
-
-// export default connect(mapStateToProps)(TileDisplay);
+// export default connect(mapStateToProps)(WidgetDisplay);

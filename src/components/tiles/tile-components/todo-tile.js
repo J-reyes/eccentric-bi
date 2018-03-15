@@ -3,7 +3,7 @@ import ToDoInput from '../todo-tile-helper/todo-input'
 import ToDoDisplay from '../todo-tile-helper/todo-display'
 
 const ToDoTile = props => (
-    <div className="card card-stats dashboard-tile">
+    <div className="card dashboard-tile">
         <ToDoInput />
         <ToDoDisplay />
     </div>
