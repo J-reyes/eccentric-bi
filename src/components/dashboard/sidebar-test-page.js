@@ -19,7 +19,7 @@ class SideBarTest extends Component {
         this.state = {
         }
     }
-    
+
     componentDidMount = () => {
         this.props.loadBitcoin();
     }
@@ -32,17 +32,23 @@ class SideBarTest extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <NavBar />
-                </div>
-                
+
+
                 <div className="container-fluid">
                     <div className="row ">
                         <div className="col-md-2" style={{ padding: 0 }} >
                             <SideBar />
                         </div>
 
+
+
                         <div className="col-md-10 dashboard-container">
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <NavBar />
+                                </div>
+
+                            </div>
                             <div className="row widget-row">
                                 <div className="col-md-12">
                                     <WidgetDropdown />
