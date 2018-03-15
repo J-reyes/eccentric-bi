@@ -56,7 +56,7 @@ class RegistrationForm extends Component {
                     </div>
                     <label>Username</label>
                     <div className="form-group">
-                        <input type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.lastName} />
+                        <input type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.username} />
                     </div>
                     <label>Email</label>
                     <div className="form-group">
