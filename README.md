@@ -150,7 +150,7 @@ const rootReducer = combineReducers({
 ***
 
 ### reducer/widget-reducer.js ###
-
+- state for widgets, able to update API data with each refresh
 ```javascript
 import { ADD_WIDGET, CHANGE_BITCOIN, CHANGE_WEATHER } from '../actions/index';
 
