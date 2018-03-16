@@ -21,13 +21,13 @@
 
 ## Widget ##
 
-    We have five widgets that are each a seperate component that can be called via .map() method with the widget-reducer. These are dynamically called with the drop down menu, courtesy of 'reactstrap' library, and can be connected to APIs to call relevant data. We are using 'coindesk' API for current bitcoin prices and 'darksky' for current weather in Santa Ana.
+We have five widgets that are each a seperate component that can be called via .map() method with the widget-reducer. These are dynamically called with the drop down menu, courtesy of 'reactstrap' library, and can be connected to APIs to call relevant data. We are using 'coindesk' API for current bitcoin prices and 'darksky' for current weather in Santa Ana.
 
-    Our widgets can also be reorganized by drag-and-drop, courtesy of Dragula.
+Our widgets can also be reorganized by drag-and-drop, courtesy of Dragula.
 
 ### widgets/bitcoin-widget.js ###
 
-    Here is our bitcoin component. The API response is channeled into state.widgetContainer.bitcoin and then read here.
+Here is our bitcoin component. The API response is channeled into state.widgetContainer.bitcoin and then read here.
 
 ```javascript
 const BitcoinWidget = props =>
@@ -213,7 +213,7 @@ export default widgetContainer
 
 ## Registration / Login Validation ##
 
-    Registration and login validation was done in three steps: handling the submission, validating username and password, and then redirecting to appropriate page. If username or password did not match an existing account, a RejectMessage component would conditionally render onto the page.
+Registration and login validation was done in three steps: handling the submission, validating username and password, and then redirecting to appropriate page. If username or password did not match an existing account, a RejectMessage component would conditionally render onto the page.
 
 ### user-login/user-login.js ###
 
