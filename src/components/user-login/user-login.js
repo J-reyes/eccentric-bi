@@ -53,13 +53,13 @@ class UserLogin extends Component {
         return (
             <div className="container-fluid" >
                 <div id="login-box" className="row" >
-                    <div className="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3" style={{ paddingLeft: 15, paddingRight: 15 }}>
+                    <div className="col-md-4 col-md-offset-4" style={{ paddingLeft: 15, paddingRight: 15 }}>
 
-                        <form onSubmit={this.handleSubmit} className="col-sm-8 col-sm-offset-2" style={{ paddingTop: 200 }}>
+                        <form onSubmit={this.handleSubmit} className="col-sm-12" style={{ paddingTop: 30 }}>
                             <div className="card" style={{ borderRadius: 10 }}>
-                                <div className="header"> <img src="./images/EccentricBI_270218_2_transparent.png" alt="" style={{ width: 250, height: 130, background: 'lightGray', marginBottom: 30 }} /></div>
+                                <div className="header col-sm-12"> <img src="./images/EccentricBI_270218_2_transparent.png" alt="" style={{ background: 'lightGray', marginBottom: 30 }} className="img-responsive"/></div>
 
-                                <div className="content" style={{ padding: 15, }}>
+                                <div className="content" style={{ padding: 15 }}>
 
                                     <div>
                                         <div className="form-group" style={{ marginBottom: 15 }}>
