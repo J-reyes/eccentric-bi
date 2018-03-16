@@ -19,6 +19,7 @@ class WidgetDisplay extends Component {
         return (
             <div className="row">
                 {
+                    // extract react components from array and render to page
                     this.props.widgetList.map((widget, index) => {
                         const WidgetComponent = widget;
                         return (
@@ -38,25 +39,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(WidgetDisplay);
-
-
-// const WidgetDisplay = props => (
-//     <div className="row">
-//         {
-//             props.widgetList.map((widget, index) => {
-//                 const WidgetComponent = widget;
-//                 return (
-//                     <div key={index} className="col-sm-3 card">
-//                         <WidgetComponent />
-//                     </div>
-//                 )
-//             })
-//         }
-//     </div>
-// )
-
-// const mapStateToProps = state => ({
-//     widgetList: state.widgetContainer.widgetList
-// })
-
-// export default connect(mapStateToProps)(WidgetDisplay);

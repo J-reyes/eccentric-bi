@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+// makeActionCreator return a function that takes in values for existing keys, and returns an action object
+// ex. addName = makeActionCreator('ADDNAME', 'name');
+// addName('Spongebob') => {type: 'ADDNAME', name: 'Spongebob'}
+
 const makeActionCreator = (type, ...argNames) => (...args) => {
     let action = { type };
     argNames.forEach( (arg, index) => {
@@ -8,6 +12,7 @@ const makeActionCreator = (type, ...argNames) => (...args) => {
     return action;
 }
 
+// declaring const variables for typing check
 export const ADD_SEARCH = 'ADD_SEARCH';
 export const ADD_LOGIN = 'ADD_LOGIN';
 export const CREATE_ACCOUNT ='CREATE_ACCOUNT';
@@ -18,6 +23,8 @@ export const ADD_WIDGET = 'ADD_WIDGET';
 export const CHANGE_BITCOIN = 'CHANGE_BITCOIN';
 export const CHANGE_WEATHER = 'CHANGE_WEATHER';
 
+// Redux Middleware Thunk Use Case
+// Special actions that produce promises are handled by middleware
 export const loadBitcoin = () => dispatch => axios.get("https://api.coindesk.com/v1/bpi/currentprice.json")
                                                 .then(response => {
                                                     dispatch(changeBitcoin(`$${response.data.bpi.USD.rate}`))
@@ -27,7 +34,7 @@ export const loadWeather = () => dispatch => axios.get("https://api.darksky.net/
                                                     dispatch(changeWeather(response.data.currently))
                                                 })
 
-
+// All action creators
 export const addSearchItem = makeActionCreator(ADD_SEARCH, 'payload'); 
 export const addLogin = makeActionCreator(ADD_LOGIN, 'payload');
 export const createAccount = makeActionCreator(CREATE_ACCOUNT, 'payload');

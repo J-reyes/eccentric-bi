@@ -100,6 +100,28 @@ export const changeWeather = makeActionCreator(CHANGE_WEATHER, 'payload');
     ## Reactstrap ##
     ## Dragula ##
 
+### widget-display.js ###
+    Handy way of dynamically adding and rendering new widgets/tiles to page
+```javascript
+render() {
+        return (
+            <div className="row">
+                {
+                    // extract react components from array and render to page
+                    this.props.widgetList.map((widget, index) => {
+                        const WidgetComponent = widget;
+                        return (
+                            <div key={index} className="col-sm-3">
+                                <WidgetComponent />
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        )
+    }
+```
+
 ## Redux ##
 
 ### store/index.js ###
