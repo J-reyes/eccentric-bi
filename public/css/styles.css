@@ -177,7 +177,16 @@ p {
     margin-bottom: 30px;
 }
 .registration-form-container {
-    background-image: url('https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-0.3.5&s=6c4de93ecb1e1d0f6a71e9d7e30e39fb&auto=format&fit=crop&w=1050&q=80');
+   background-image: url('../images/background1.jpeg');
+    
+    height: 100vh;
+    background-position: center;
+  
+    background-size: cover;
+
+}
+.login-container {
+   background-image: url('../images/loginBackground.jpeg');
     
     height: 100vh;
     background-position: center;
