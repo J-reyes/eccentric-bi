@@ -26,10 +26,6 @@ class Dashboard extends Component {
         this.props.loadWeather();
     }
 
-    // componentDidMount = () => {
-    //     var specialContainer = ReactDOM.findDOMNode(this);
-    //     Dragula([specialContainer]);
-    // }
 
     render() {
         return (

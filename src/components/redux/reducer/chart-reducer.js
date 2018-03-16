@@ -1,3 +1,4 @@
+// dummy data for chart tiles/widgets
 const chartState = {
     barData: {
         labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
