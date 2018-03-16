@@ -14,7 +14,7 @@ export const REDWOODWIDGET = 'REDWOODWIDGET';
 
 
 const widgetState = {
-    widgetList: [],
+    widgetList: [RedwoodWidget, WeatherWidget],
     bitcoin: '',
     weather: ''
 }

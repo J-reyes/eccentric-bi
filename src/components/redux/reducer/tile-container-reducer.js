@@ -10,7 +10,7 @@ export const TODOTILE = 'TODOTILE';
 
 
 const tileState = {
-    tileList: []
+    tileList: [BarTile, ToDoTile]
 }
 
 const tiles = {
