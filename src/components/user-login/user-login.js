@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addLogin } from './../redux/actions/index';
 
@@ -77,7 +77,7 @@ class UserLogin extends Component {
                             <button className="btn btn-info pull-right btn-lg" type='submit' >Log In</button>
                         </div>
                         <div className="row" style={{ display: 'flex', justifyContent: 'center', marginTop: 20 }}>
-                            <a href="#"  > New Users Register Here </a>
+                            <Link to="/registration"><a href="#"  > New Users Register Here </a></Link>
                         </div>
                     </form>
 

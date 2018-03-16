@@ -27,7 +27,7 @@ class SideBar extends Component {
             
             
             <div id="sidebar" style={{ background: 'black', color: '#FFF', height: 1100  }}>
-                <a href=""> <div ><img id="logo"src="./images/EccentricBI_270218_2_transparent.png" alt=""/></div></a>
+                <a href="#"> <div ><img id="logo"src="./images/EccentricBI_270218_2_transparent.png" alt=""/></div></a>
                 <hr style={{ background: 'black'}} />
                 
                     <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='dashboard'>

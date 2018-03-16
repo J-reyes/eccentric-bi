@@ -21,10 +21,10 @@ class Container extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/" component={Registration} />
+                    <Route exact path="/" component={LoginPage} />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/userprofile" component={UserProfile} />
-                    <Route path="/login" component={LoginPage} />
+                    <Route path="/registration" component={Registration} />
                 </Switch>
             </div>
 

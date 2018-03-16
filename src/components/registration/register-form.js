@@ -36,7 +36,7 @@ class RegistrationForm extends Component {
         if (this.state.success) {
             return (
                 <Redirect to={{
-                    pathname: '/login',
+                    pathname: '/',
                     state: { newUser: true }
                 }} />
             );
@@ -145,7 +145,6 @@ class RegistrationForm extends Component {
                                     </div>
                                     <div className="footer col-md-10 text-center">
                                      <button style={{fontSize: 14}} className="btn btn-info" type="submit"> Create Free Account</button>
-                                     <Link to="/login">TEST</Link>
                                     </div>
                                     
                                 </div>
