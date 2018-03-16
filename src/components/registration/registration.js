@@ -18,9 +18,6 @@ class Registration extends Component {
         return (
             <div className="container-fluid registration-form-container">
             <div className="row">
-                    <div className="col-md-12" style={{ padding: 0, borderRadius: 0 }} >
-                        <EccentricNavBar />
-                    </div>
 
                 </div>
                 <Header />
