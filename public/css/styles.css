@@ -186,11 +186,17 @@ p {
 
 }
 .login-container {
-   background-image: url('../images/loginBackground.jpeg');
+   background-image: url('../images/background1.jpeg');
     
     height: 100vh;
     background-position: center;
   
     background-size: cover;
+
+}
+#login-main {
+    display: flex;
+    align-items: center;     /* vertical */
+  justify-content: center;
 
 }

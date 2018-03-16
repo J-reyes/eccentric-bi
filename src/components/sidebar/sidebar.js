@@ -38,7 +38,7 @@ class SideBar extends Component {
                             <NavText id="user"  style={{fontSize: 18, paddingLeft: 45 }}>Somebody's page</NavText>
                             <Nav id="myProfile">
                                 <NavIcon></NavIcon>
-                                <NavText> My Profile </NavText>
+                                <NavText><Link to="/userprofile">My Profile</Link> </NavText>
                             </Nav>
                             <Nav id="editProfile">
                                 <NavIcon></NavIcon>
