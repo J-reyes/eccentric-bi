@@ -16,9 +16,6 @@ class LoginPage extends Component {
         return (
 
             <div className="container-fluid registration-form-container">
-                <div className="col-md-12" style={{ padding: 0, borderRadius: 0 }} >
-                    <EccentricNavBar />
-                </div>
                 <Title />
                 <UserLogin location={this.props.location} />
             </div>
