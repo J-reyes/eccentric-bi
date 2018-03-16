@@ -13,14 +13,6 @@ class UserLogin extends Component {
             password: '',
             success: false,
             reject: false,
-            stored: [{
-                username: 'Andrew',
-                password: 'abc123'
-            },
-            {
-                username: 'Patrick',
-                password: 'Starfish'
-            }]
         }
     }
 
@@ -40,7 +32,7 @@ class UserLogin extends Component {
     }
 
     isValid = () => {
-        for (let account of this.state.stored) {
+        for (let account of this.props.accounts) {
             if (account.username === this.state.username && account.password === this.state.password) {
                 return true;
             }
@@ -97,11 +89,13 @@ class UserLogin extends Component {
     }
 }
 
-
+const mapStateToProps = state => ({
+    accounts: state.accountManager.register
+})
 
 const mapDispatchToProps = dispatch => ({
     sendLogin: login => dispatch(addLogin(login))
 })
 
 
-export default connect(null, mapDispatchToProps)(UserLogin);
+export default connect(mapStateToProps, mapDispatchToProps)(UserLogin);

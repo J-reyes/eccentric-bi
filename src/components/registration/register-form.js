@@ -71,7 +71,6 @@ class RegistrationForm extends Component {
                         <input type="password" className="form-control" onChange={(e) => { this.setState({ confirm: e.target.value }) }} value={this.state.confirm} />
                     </div>
 
-
                     <button className="btn btn-info" type="submit">Submit</button>
                 </div>
                 <Link to="/login">TEST</Link>
