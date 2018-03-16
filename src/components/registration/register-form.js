@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SvgIcon from 'react-icons-kit';
+
 import { user } from 'react-icons-kit/icomoon/user';
 import { statsDots } from 'react-icons-kit/icomoon/statsDots';
 import { headphones } from 'react-icons-kit/icomoon/headphones';
@@ -37,45 +38,132 @@ class RegistrationForm extends Component {
                 <Redirect to={{
                     pathname: '/login',
                     state: { newUser: true }
-                }}/>
+                }} />
             );
         }
         // add conditional rendering to login page
 
         return (
 
-            <form onSubmit={this.handleSubmit}>
-                <div className="card  card-plugin">
-                    <label>First Name</label>
-                    <div className="form-group">
-                        <input type="text" className="form-control" onChange={(e) => { this.setState({ firstName: e.target.value }) }} value={this.state.firstName} />
-                    </div>
-                    <label>Last Name</label>
-                    <div className="form-group">
-                        <input type="text" className="form-control" onChange={(e) => { this.setState({ lastName: e.target.value }) }} value={this.state.lastName} />
-                    </div>
-                    <label>Username</label>
-                    <div className="form-group">
-                        <input type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.username} />
-                    </div>
-                    <label>Email</label>
-                    <div className="form-group">
-                        <input type="text" className="form-control" value={this.state.email} onChange={(e) => { this.setState({ email: e.target.value }) }} />
-                    </div>
-                    <label>Password</label>
-                    <div className="form-group">
-                        <input type="password" className="form-control" onChange={(e) => { this.setState({ password: e.target.value }) }} value={this.state.password} />
-                    </div>
-                    <label>Confirm Password</label>
-                    <div className="form-group">
-                        <input type="password" className="form-control" onChange={(e) => { this.setState({ confirm: e.target.value }) }} value={this.state.confirm} />
+            <div className="container">
+                <div className="row">
+                 <div className="col-md-4 col-md-offset-2">
+                    <div >
+                        <div className="pull-left" style={{paddingRight: 10}}>
+                            
+                                <SvgIcon size={35} icon={user}/>
+                            
+                        </div>
                     </div>
 
-                    <button className="btn btn-info" type="submit">Submit</button>
+                    <div className="media-body" style={{ paddingBottom: 45}}>
+                    
+                        <h4 className="media-heading"> Free Account </h4>
+                        
+                        <p>
+                        Here you can write a feature description for your dashboard,
+                        let the users know what is the value that you give them.
+                        
+                        </p>
+                    </div>
+
+                    <div >
+                        <div className="pull-left" style={{paddingRight: 10}}>
+                            
+                                <SvgIcon size={35} icon={statsDots}/>
+                            
+                        </div>
+                    </div>
+
+                    <div className="media-body" style={{ paddingBottom: 45}}>
+                    
+                        <h4 className="media-heading"> Awesome Performance  </h4>
+                        <p >
+                        Here you can write a feature description for your dashboard,
+                        let the users know what is the value that you give them.
+                        
+                        </p>
+                     
+                        
+                    </div>
+                    <div>
+                        <div className="pull-left" style={{paddingRight: 10}}>
+                            
+                                <SvgIcon size={35} icon={headphones}/>
+                            
+                        </div>
+                    </div>
+
+                    <div className="media-body" style={{ paddingBottom: 45}}>
+                    
+                        <h4 className="media-heading"> Global Support </h4>
+                        
+                        <p>
+                        Here you can write a feature description for your dashboard,
+                        let the users know what is the value that you give them.
+                        
+                        </p>
+                        
+                    </div>
+
                 </div>
-                <Link to="/login">TEST</Link>
-            </form>
-            
+
+
+
+                {/* section with inputs */}
+                <div className="col-md-4">
+
+                    <form onSubmit={this.handleSubmit}>
+                        <div >
+
+                            <div className="content">
+                                    <div>    
+                                        <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Your First Name" type="text" className="form-control" onChange={(e) => { this.setState({ firstName: e.target.value }) }} value={this.state.firstName} />
+                                        </div>
+                                        
+                                        <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Your Last Name" type="text" className="form-control" onChange={(e) => { this.setState({ lastName: e.target.value }) }} value={this.state.lastName} />
+                                        </div>
+                                        
+                                        <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Enter Username" type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.username} />
+                                        </div>
+                                        
+                                        <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Enter Email" type="text" className="form-control" value={this.state.email} onChange={(e) => { this.setState({ email: e.target.value }) }} />
+                                        </div>
+                                    
+                                        <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Password Confirmation" type="password" className="form-control" onChange={(e) => { this.setState({ password: e.target.value }) }} value={this.state.password} />
+                                        </div>
+                                        
+                                        <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Password Confirmation" type="password" className="form-control" onChange={(e) => { this.setState({ confirm: e.target.value }) }} value={this.state.confirm} />
+                                        </div>
+                                            
+                                    </div>
+                                    <div className="footer col-md-10 text-center">
+                                     <button style={{fontSize: 14}} className="btn btn-info" type="submit"> Create Free Account</button>
+                                     <Link to="/login">TEST</Link>
+                                    </div>
+                                    
+                                </div>
+                              
+                            </div>  
+                             
+                             
+                        
+                    </form>
+                
+                </div>
+                    
+                </div>
+                
+            </div>
+
+
+
 
         )
     }

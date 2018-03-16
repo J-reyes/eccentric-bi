@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import UserLogin from './user-login';
 import Title from './../title';
+import EccentricNavBar from '../navbar/navbar'
 
 class LoginPage extends Component {
     constructor(props) {
@@ -13,9 +14,13 @@ class LoginPage extends Component {
     }
     render() {
         return (
-            <div className="container-fluid">
-                <Title/>
-                <UserLogin location={this.props.location}/>
+
+            <div className="container-fluid registration-form-container">
+                <div className="col-md-12" style={{ padding: 0, borderRadius: 0 }} >
+                    <EccentricNavBar />
+                </div>
+                <Title />
+                <UserLogin location={this.props.location} />
             </div>
 
 
