@@ -54,7 +54,8 @@ class UserLogin extends Component {
             <div className="container-fluid" >
                 <div id="login-box" className="row" >
                     <div className="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3" style={{ paddingLeft: 15, paddingRight: 15 }}>
-                        <form onSubmit={this.handleSubmit} className="col-sm-8 col-sm-offset-2" >
+
+                        <form onSubmit={this.handleSubmit} className="col-sm-8 col-sm-offset-2" style={{ paddingTop: 200 }}>
                             <div className="card" style={{ borderRadius: 10 }}>
                                 <div className="header"> <img src="./images/EccentricBI_270218_2_transparent.png" alt="" style={{ width: 250, height: 130, background: 'lightGray', marginBottom: 30 }} /></div>
 
