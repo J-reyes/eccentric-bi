@@ -1,5 +1,6 @@
 import { CREATE_ACCOUNT, ADD_LOGIN } from './../actions/index';
 
+// stores all account sign-in data for login purposes
 const accounts = {
     login: { 
         username: '',
