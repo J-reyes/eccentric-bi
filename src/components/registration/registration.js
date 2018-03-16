@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EccentricNavBar from '../navbar/navbar'
 
 // import Registration Form
 import RegistrationForm from './register-form';
@@ -15,7 +16,13 @@ class Registration extends Component {
     }
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid registration-form-container">
+            <div className="row">
+                    <div className="col-md-12" style={{ padding: 0, borderRadius: 0 }} >
+                        <EccentricNavBar />
+                    </div>
+
+                </div>
                 <Header />
                 <RegistrationForm />
             </div>

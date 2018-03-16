@@ -16,6 +16,10 @@ import Button from 'react-bootstrap/lib/Button';
 
 import SvgIcon from 'react-icons-kit';
 import { search } from 'react-icons-kit/icomoon/search';
+import { menu } from 'react-icons-kit/icomoon/menu';
+import { ic_notifications } from 'react-icons-kit/md/ic_notifications';
+import { statsDots } from 'react-icons-kit/icomoon/statsDots';
+import { edit } from 'react-icons-kit/entypo/edit'; 
 
 class EccentricNavBar extends Component {
     constructor(props) {
@@ -48,7 +52,7 @@ class EccentricNavBar extends Component {
                             </Navbar.Form>
 
                             <Nav className="pull-right">
-                                <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown" style={{fontSize: 14}} >
+                                <NavDropdown eventKey={3} title={<SvgIcon  size={15} icon={menu} />} id="basic-nav-dropdown" style={{fontSize: 15}} >
                                     <MenuItem eventKey={3.1}>Action</MenuItem>
                                     <MenuItem eventKey={3.2}>Another action</MenuItem>
                                     <MenuItem eventKey={3.3}>Something else here</MenuItem>
@@ -58,7 +62,7 @@ class EccentricNavBar extends Component {
                                 </NavDropdown>
                             </Nav>
                             <Nav className="pull-right">
-                                <NavDropdown eventKey={4} title="Dropdown" id="basic-nav-dropdown" style={{fontSize: 14}} >
+                                <NavDropdown eventKey={4} title={<SvgIcon size={20} icon={ic_notifications} />} id="basic-nav-dropdown" style={{fontSize: 14}} >
                                
                                     <MenuItem eventKey={4.1}>Action</MenuItem>
                                     <MenuItem eventKey={4.2}>Another action</MenuItem>
@@ -69,7 +73,7 @@ class EccentricNavBar extends Component {
                                 </NavDropdown>
                             </Nav>
                             <Nav className="pull-right">
-                                <NavDropdown eventKey={5} title="Dropdown" id="basic-nav-dropdown" style={{fontSize: 14}} >
+                                <NavDropdown eventKey={5} title={<SvgIcon size={19} icon={edit} />} id="basic-nav-dropdown" style={{fontSize: 14}} >
                                     <MenuItem eventKey={5.1}>Action</MenuItem>
                                     <MenuItem eventKey={5.2}>Another action</MenuItem>
                                     <MenuItem eventKey={5.3}>Something else here</MenuItem>
@@ -78,9 +82,10 @@ class EccentricNavBar extends Component {
 
                                 </NavDropdown>
                             </Nav>
-                            <Nav className="pull-right" style={{fontSize: 14}} >
-                                <NavItem eventKey={2} href="#">
-                                    Link Right
+                            <Nav className="pull-right"  >
+                                <NavItem eventKey={2} href="#" style={{fontSize: 14}}>
+                                    <SvgIcon size={17} icon={statsDots } />
+                                    <p style={{display: 'inline', fontSize: 20, paddingLeft: 5}} > Stats </p>
                                       </NavItem>
 
                             </Nav>
