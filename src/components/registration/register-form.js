@@ -60,7 +60,7 @@ class RegistrationForm extends Component {
                     
                         <h4 className="media-heading"> Free Account </h4>
                         
-                        <p>
+                        <p style={{color: 'flatBlack'}}>
                         Here you can write a feature description for your dashboard,
                         let the users know what is the value that you give them.
                         

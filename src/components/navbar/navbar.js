@@ -37,7 +37,7 @@ class EccentricNavBar extends Component {
 
             <div className="row">
                 <div className="col-md-12">
-                    <Navbar inverse collapseOnSelect style={{ borderRadius: 0, background: 'gold' }}>
+                    <Navbar inverse collapseOnSelect style={{ borderRadius: 0, background: 'gold', padding: 0 }}>
 
                         <Navbar.Collapse>
                             <Navbar.Form pullLeft>
