@@ -127,11 +127,11 @@ class RegistrationForm extends Component {
                                         </div>
                                         
                                         <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
-                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Enter Email" type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.username} />
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Enter Username" type="text" className="form-control" onChange={(e) => { this.setState({ username: e.target.value }) }} value={this.state.username} />
                                         </div>
                                         
                                         <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
-                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Company" type="text" className="form-control" value={this.state.email} onChange={(e) => { this.setState({ email: e.target.value }) }} />
+                                            <input style={{fontSize: 14}} id="registration-input" placeholder="Enter Email" type="text" className="form-control" value={this.state.email} onChange={(e) => { this.setState({ email: e.target.value }) }} />
                                         </div>
                                     
                                         <div className="col-md-10 form-group" style={{paddingBottom: 10}}>
@@ -157,6 +157,7 @@ class RegistrationForm extends Component {
                     </form>
                 
                 </div>
+                    
                 </div>
                 
             </div>

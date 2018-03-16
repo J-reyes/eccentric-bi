@@ -91,7 +91,7 @@ class EccentricNavBar extends Component {
                             </Nav>
                           
                         </Navbar.Collapse>
-                    </Navbar>;
+                    </Navbar>
                 </div>
             </div>
 
