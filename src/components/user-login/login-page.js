@@ -15,8 +15,8 @@ class LoginPage extends Component {
     render() {
         return (
 
-            <div className="container-fluid registration-form-container">
-                <div className="col-md-12" style={{ padding: 0, borderRadius: 0 }} >
+            <div className="container-fluid login-container">
+                <div className="container" style={{ padding: 0, borderRadius: 0, backgroundColor: 'none' }} >
                     <EccentricNavBar />
                 </div>
                 <Title />
