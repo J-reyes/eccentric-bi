@@ -28,7 +28,7 @@ namespace eccentricBi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add InMemory database
-            services.AddDbContext<LeadContext>(opt => opt.UseInMemoryDatabase("MyDB"));
+            services.AddDbContext<EccentricContext>(opt => opt.UseInMemoryDatabase("MyDB"));
 
             // Add CORS Handling
             services.AddCors();
