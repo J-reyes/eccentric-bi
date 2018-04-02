@@ -5,35 +5,31 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 using eccentricBi.Models;
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace eccentricBi.Controllers
 {
     [Route("api/[controller]")]
-    public class LeadsController : Controller
+    public class UsersController : Controller
     {
         private EccentricContext _context;
 
-        public LeadsController(EccentricContext context)
-        {
-            _context = context;
-        }
 
-        // GET: api/values
+
+        // GET: api/users
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        // GET api/users/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST api/users
         [HttpPost]
         public void Post([FromBody]string value)
         {
