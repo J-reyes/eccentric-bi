@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace eccentricBi.Controllers
 {
     [Route("api/[controller]")]
-    public class LeadsController : Controller
+    public class BusinessLeadsController : Controller
     {
         // GET: api/values
         [HttpGet]
