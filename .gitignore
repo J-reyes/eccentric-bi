@@ -1,7 +1,7 @@
 node_modules/*
 package-lock.json
 
-obj/*
-bin/*
-.vscode/*
-.csproj
+obj/
+bin/
+.vscode/
+*.csproj
