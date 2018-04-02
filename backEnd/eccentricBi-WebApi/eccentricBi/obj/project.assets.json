@@ -12533,23 +12533,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/NakedSnake/.nuget/packages/": {},
+    "/Users/Andrew/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/NakedSnake/Documents/RedwoodCodeAcademy/Week 9/Project3/eccentric-bi/backEnd/eccentricBi-WebApi/eccentricBi/eccentricBi.csproj",
+      "projectUniqueName": "/Library/redwood_code/eccentric_extended/eccentric-bi/backEnd/eccentricBi-WebApi/eccentricBi/eccentricBi.csproj",
       "projectName": "eccentricBi",
-      "projectPath": "/Users/NakedSnake/Documents/RedwoodCodeAcademy/Week 9/Project3/eccentric-bi/backEnd/eccentricBi-WebApi/eccentricBi/eccentricBi.csproj",
-      "packagesPath": "/Users/NakedSnake/.nuget/packages/",
-      "outputPath": "/Users/NakedSnake/Documents/RedwoodCodeAcademy/Week 9/Project3/eccentric-bi/backEnd/eccentricBi-WebApi/eccentricBi/obj",
+      "projectPath": "/Library/redwood_code/eccentric_extended/eccentric-bi/backEnd/eccentricBi-WebApi/eccentricBi/eccentricBi.csproj",
+      "packagesPath": "/Users/Andrew/.nuget/packages/",
+      "outputPath": "/Library/redwood_code/eccentric_extended/eccentric-bi/backEnd/eccentricBi-WebApi/eccentricBi/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/NakedSnake/.config/NuGet/NuGet.Config"
+        "/Users/Andrew/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
