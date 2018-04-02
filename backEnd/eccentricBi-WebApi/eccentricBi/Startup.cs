@@ -8,6 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+
+using eccentricBi.Models;
+
 
 namespace eccentricBi
 {
@@ -23,6 +27,12 @@ namespace eccentricBi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add InMemory database
+            services.AddDbContext<LeadContext>(opt => opt.UseInMemoryDatabase("MyDB"));
+
+            // Add CORS Handling
+            services.AddCors();
+
             services.AddMvc();
         }
 
@@ -34,6 +44,14 @@ namespace eccentricBi
                 app.UseDeveloperExceptionPage();
             }
 
+            // Handles CORS error
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+            );
+            
             app.UseMvc();
         }
     }
