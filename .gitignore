@@ -1,11 +1,8 @@
-node_modules/*
-package-lock.json
+frontEnd/node_modules/
+frontEnd/package-lock.json
 
-obj/
-bin/
-.vscode/
+backEnd/obj/
+backEnd/bin/
+backEnd/.vscode/
 *.csproj
-backEnd/obj/project.assets.json
-backEnd/obj/backEnd.csproj.nuget.cache
-backEnd/obj/backEnd.csproj.nuget.g.props
-backEnd/obj/Debug/netcoreapp2.0/backEnd.csproj.CoreCompileInputs.cache
+
