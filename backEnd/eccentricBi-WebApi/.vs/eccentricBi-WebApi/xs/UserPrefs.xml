@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{84AE5E09-A30A-49C0-9492-D8A6D882A957}|Default">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="eccentricBi/Models/BusinessLead.cs">
     <Files>
       <File FileName="eccentricBi/Startup.cs" Line="35" Column="13" />
@@ -6,6 +7,15 @@
       <File FileName="eccentricBi/Program.cs" Line="26" Column="1" />
       <File FileName="eccentricBi/Controllers/BusinessLeadsController.cs" Line="20" Column="10" />
       <File FileName="eccentricBi/Models/BusinessLead.cs" Line="11" Column="1" NotebookId="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="eccentricBi/Startup.cs">
+    <Files>
+      <File FileName="eccentricBi/Models/BusinessLead.cs" Line="11" Column="1" />
+      <File FileName="eccentricBi/Models/LeadContext.cs" Line="22" Column="10" />
+      <File FileName="eccentricBi/Program.cs" Line="1" Column="1" />
+      <File FileName="eccentricBi/Controllers/BusinessLeadsController.cs" Line="16" Column="32" />
+      <File FileName="eccentricBi/Startup.cs" Line="17" Column="10" />
+>>>>>>> 70701873d6be684dd577cda8bb77b41261b961de
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
