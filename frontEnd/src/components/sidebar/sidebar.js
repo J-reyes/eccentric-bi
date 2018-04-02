@@ -3,6 +3,7 @@ import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 
 import { Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router';
 
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
 import { ic_business } from 'react-icons-kit/md/ic_business';

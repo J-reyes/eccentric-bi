@@ -200,3 +200,21 @@ p {
   justify-content: center;
 
 }
+#leadForm{
+    
+    padding-top: 30px;
+    padding-left: 22%;
+}
+#formInput {
+    padding-top: 10px;
+}
+#completeBox {
+    margin-top: 15px;
+}
+.LeadPage {
+    margin-top: 0px;
+
+}
+#leadCard {
+    padding: 0 60px;
+}
