@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 using eccentricBi.Models;
 
-namespace eccentricBi.Controllers
+namespace eccentricBi
 {
     [Route("api/users")]
     public class UsersController : Controller
@@ -23,34 +23,36 @@ namespace eccentricBi.Controllers
                     lastName: "Starfish",
                     username: "NoThisIsPatrick"
             );
-
-        // if (_context.Users.Count() == 0)
+        
+        // public UsersController(EccentricContext context)
         // {
-        //     _context.Users.Add(PatrickStarfish);
+        //     _context = context;
+        //     if (_context.User.Count() ==0)
+        //     {
+        //    }
         // }
-        }
-
-
-    // GET: api/users
+        
+        // GET: api/values
         [HttpGet]
         public List<User> Get()
         {
-            return _context.Users.ToList();
+            return _context.User.ToList();
         }
 
-        // GET api/users/5
+        // GET api/values/5
         [HttpGet("{id}")]
         public User Get(int id)
         {
-            var u = _context.Users.FirstOrDefault(x => x.Id == id);
-            return u;
+            var b = _context.User.FirstOrDefault(x => x.Id == id);
+            return b;
+
         }
 
-        // POST api/users
+        // POST api/values
         [HttpPost]
         public User Post([FromBody]User newUser)
         {
-            _context.Users.Add(newUser);
+            _context.User.Add(newUser);
             _context.SaveChanges();
             return newUser;
         }
@@ -68,8 +70,8 @@ namespace eccentricBi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var u = _context.Users.FirstOrDefault(x => x.Id == id);
-            _context.Users.Remove(u);
+            var b = _context.User.FirstOrDefault(x => x.Id == id);
+            _context.User.Remove(b);
             _context.SaveChanges();
         }
     }

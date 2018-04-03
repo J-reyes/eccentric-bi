@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using eccentricBi.Models;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace eccentricBi.Controllers
+namespace eccentricBi
 {
     [Route("api/leads")]
     public class LeadsController : Controller
@@ -24,14 +24,14 @@ namespace eccentricBi.Controllers
         [HttpGet]
         public List<BusinessLead> Get()
         {
-            return _context.BusinessLeads.ToList();
+            return _context.BusinessLead.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public BusinessLead Get(int id)
         {
-            var b = _context.BusinessLeads.FirstOrDefault(x => x.Id == id);
+            var b = _context.BusinessLead.FirstOrDefault(x => x.Id == id);
             return b;
 
         }
@@ -40,7 +40,7 @@ namespace eccentricBi.Controllers
         [HttpPost]
         public BusinessLead Post([FromBody]BusinessLead newLead)
         {
-            _context.BusinessLeads.Add(newLead);
+            _context.BusinessLead.Add(newLead);
             _context.SaveChanges();
             return newLead;
         }
@@ -58,8 +58,8 @@ namespace eccentricBi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var b = _context.BusinessLeads.FirstOrDefault(x => x.Id == id);
-            _context.BusinessLeads.Remove(b);
+            var b = _context.BusinessLead.FirstOrDefault(x => x.Id == id);
+            _context.BusinessLead.Remove(b);
             _context.SaveChanges();
         }
     }

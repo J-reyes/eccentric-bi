@@ -12,6 +12,7 @@ namespace eccentricBi.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public bool IsAdmin {get; set; }
 
         public List<BusinessLead> LeadsOwned { get; set; }
 
@@ -31,9 +32,16 @@ namespace eccentricBi.Models
 
         public User (string firstName, string lastName, string username)
         {
+        }
+        
+        public User(string firstName, string lastName, string email, string username, string password, bool isAdmin)
+        {
+            
             FirstName = firstName;
             LastName = lastName;
             Username = username;
+            Password = password;
+            IsAdmin = isAdmin;
         }
 
     }
