@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace eccentricBi.Models
@@ -12,18 +13,27 @@ namespace eccentricBi.Models
         public string Username { get; set; }
         public string Password { get; set; }
 
+        public List<BusinessLead> LeadsOwned { get; set; }
+
         public User()
         {
         }
 
-        public User(int id, string firstName, string lastName, string email, string username, string password)
+        // public User(int id, string firstName, string lastName, string email, string username, string password)
+        // {
+        //     Id = id;
+        //     FirstName = firstName;
+        //     LastName = lastName;
+        //     Email = email;
+        //     Username = username;
+        //     Password = password;
+        // }
+
+        public User (string firstName, string lastName, string username)
         {
-            Id = id;
             FirstName = firstName;
             LastName = lastName;
-            Email = email;
             Username = username;
-            Password = password;
         }
 
     }
