@@ -27,12 +27,17 @@ namespace eccentricBi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string hostname = "eccentricdb.cddaby3dqmhc.us-east-2.rds.amazonaws.com";
+            string dbname = "eccentricdb";
+            string username = "pattruong";
+            string password = "eccentricbi";
+
+            var cs = "Data Source=" + hostname + ";Initial Catalog=" + dbname + ";User ID=" + username + ";Password=" + password + ";";
             // Add InMemory database
-            services.AddDbContext<EccentricContext>(opt => opt.UseInMemoryDatabase("MyDB"));
+            services.AddDbContext<EccentricContext>(opt => opt.UseSqlServer(cs));
 
             // Add CORS Handling
             services.AddCors();
-
             services.AddMvc();
         }
 

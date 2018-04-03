@@ -22,8 +22,8 @@ namespace eccentricBi.Models
             
         }
 
-        public DbSet<BusinessLead> BusinessLeads { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<BusinessLead> BusinessLead { get; set; }
+        public DbSet<User> User { get; set; }
 
     }
 
