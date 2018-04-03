@@ -15,7 +15,7 @@ export const REDWOODWIDGET = 'REDWOODWIDGET';
 
 // storing react components in widgetState
 const widgetState = {
-    widgetList: [RedwoodWidget, WeatherWidget],
+    widgetList: [RedwoodWidget, WeatherWidget, BitcoinWidget, CalendarWidget],
     bitcoin: '',
     weather: ''
 }

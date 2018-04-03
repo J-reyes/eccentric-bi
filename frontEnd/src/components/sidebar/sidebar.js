@@ -53,7 +53,7 @@ class SideBar extends Component {
                      
                         <Nav id='dashbaord'>
                             <NavIcon><SvgIcon size={40} icon={ic_dashboard} /></NavIcon>
-                            <NavText style={{fontSize: 16, paddingLeft: 20 }} >DASHBOARD</NavText>
+                            <NavText style={{fontSize: 16, paddingLeft: 20 }} ><Link to="/dashboard">Dashboard</Link></NavText>
                         </Nav>
                         <Nav id='charts'>
                             <NavIcon><SvgIcon size={40} icon={ic_insert_chart} /></NavIcon>
@@ -70,15 +70,15 @@ class SideBar extends Component {
                             <NavText style={{fontSize: 16,paddingLeft: 20 }} >PAGES</NavText>
                             <Nav id="userPage">
                                 <NavIcon></NavIcon>
-                                <NavText> User Page </NavText>
+                                <NavText> <Link to="/userprofile">User Page</Link>   </NavText>
                             </Nav>
                             <Nav id="loginPage">
                                 <NavIcon></NavIcon>
-                                <NavText> Login Page </NavText>
+                                <NavText> <Link to="/">Login Page </Link></NavText>
                             </Nav>
                             <Nav id="Register">
                                 <NavIcon></NavIcon>
-                                <NavText> Register </NavText>
+                                <NavText> <Link to="/">Register</Link></NavText>
                             </Nav>
                             <Nav id="lockScreen">
                                 <NavIcon></NavIcon>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
+
+
+
 const BitcoinWidget = props =>
     <div className="card small-widget">
         <h3>Bitcoin Price</h3>
