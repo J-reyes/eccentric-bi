@@ -16,9 +16,9 @@ namespace eccentricBi.Models
         {
         }
 
-        public User(int id, string firstName, string lastName, string email, string username, string password)
+        public User(string firstName, string lastName, string email, string username, string password)
         {
-            Id = id;
+            
             FirstName = firstName;
             LastName = lastName;
             Email = email;

@@ -15,5 +15,10 @@ namespace eccentricBi.Models
         public BusinessLead()
         {
         }
+
+        public BusinessLead(string name, string email, int phone, string description, int timeofcontact, string owner, bool iscompltet)
+        {
+
+        }
     }
 }
