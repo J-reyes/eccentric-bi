@@ -18,7 +18,7 @@ namespace eccentricBi.Controllers
         public UsersController(EccentricContext context)
         {
             _context = context;
-            if (_context.Users.Count() ==0)
+            if (_context.User.Count() ==0)
             {
            }
         }
@@ -27,14 +27,14 @@ namespace eccentricBi.Controllers
         [HttpGet]
         public List<User> Get()
         {
-            return _context.Users.ToList();
+            return _context.User.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public User Get(int id)
         {
-            var b = _context.Users.FirstOrDefault(x => x.Id == id);
+            var b = _context.User.FirstOrDefault(x => x.Id == id);
             return b;
 
         }
@@ -43,7 +43,7 @@ namespace eccentricBi.Controllers
         [HttpPost]
         public User Post([FromBody]User newUser)
         {
-            _context.Users.Add(newUser);
+            _context.User.Add(newUser);
             _context.SaveChanges();
             return newUser;
         }
@@ -61,8 +61,8 @@ namespace eccentricBi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var b = _context.Users.FirstOrDefault(x => x.Id == id);
-            _context.Users.Remove(b);
+            var b = _context.User.FirstOrDefault(x => x.Id == id);
+            _context.User.Remove(b);
             _context.SaveChanges();
         }
     }

@@ -17,7 +17,7 @@ namespace eccentricBi.Models
         {
         }
 
-        public User(string firstName, string lastName, string email, string username, string password)
+        public User(string firstName, string lastName, string email, string username, string password, bool isAdmin)
         {
             
             FirstName = firstName;
