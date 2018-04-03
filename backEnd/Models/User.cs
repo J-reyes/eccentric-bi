@@ -14,29 +14,13 @@ namespace eccentricBi.Models
         public string Password { get; set; }
         public bool IsAdmin {get; set; }
 
-        public List<BusinessLead> LeadsOwned { get; set; }
-
         public User()
         {
         }
-
-        // public User(int id, string firstName, string lastName, string email, string username, string password)
-        // {
-        //     Id = id;
-        //     FirstName = firstName;
-        //     LastName = lastName;
-        //     Email = email;
-        //     Username = username;
-        //     Password = password;
-        // }
-
-        public User (string firstName, string lastName, string username)
-        {
-        }
         
-        public User(string firstName, string lastName, string email, string username, string password, bool isAdmin)
+        public User(int iD, string firstName, string lastName, string email, string username, string password, bool isAdmin)
         {
-            
+            Id = iD;
             FirstName = firstName;
             LastName = lastName;
             Username = username;
