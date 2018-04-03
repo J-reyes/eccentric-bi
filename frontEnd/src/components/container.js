@@ -7,7 +7,8 @@ import LoginPage from './user-login/login-page'
 import Dashboard from './dashboard/dashboard';
 import NavBar from './navbar/navbar';
 import UserProfile from './user-profile/user-profile';
-import Registration from './registration/registration'
+import Registration from './registration/registration';
+import LeadPage from './lead-page/lead-page';
 
 
 
@@ -25,6 +26,7 @@ class Container extends Component {
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/userprofile" component={UserProfile} />
                     <Route path="/registration" component={Registration} />
+                    <Route path="/leads" component={LeadPage} />
                 </Switch>
             </div>
 
