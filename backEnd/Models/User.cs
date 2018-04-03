@@ -11,6 +11,7 @@ namespace eccentricBi.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public bool IsAdmin {get; set; }
 
         public User()
         {
@@ -24,6 +25,7 @@ namespace eccentricBi.Models
             Email = email;
             Username = username;
             Password = password;
+            IsAdmin = isAdmin;
         }
 
     }
