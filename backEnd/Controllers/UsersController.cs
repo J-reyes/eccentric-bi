@@ -7,22 +7,31 @@ using Microsoft.EntityFrameworkCore;
 
 using eccentricBi.Models;
 
-namespace eccentricBi.Controllers
+namespace eccentricBi
 {
     [Route("api/users")]
     public class UsersController : Controller
     {
         private EccentricContext _context;
 
-
         public UsersController(EccentricContext context)
         {
             _context = context;
-            if (_context.User.Count() ==0)
-            {
-           }
-        }
 
+            public User PatrickStarfish = new User(
+                    firstName: "Patrick",
+                    lastName: "Starfish",
+                    username: "NoThisIsPatrick"
+            );
+        
+        // public UsersController(EccentricContext context)
+        // {
+        //     _context = context;
+        //     if (_context.User.Count() ==0)
+        //     {
+        //    }
+        // }
+        
         // GET: api/values
         [HttpGet]
         public List<User> Get()
@@ -67,3 +76,4 @@ namespace eccentricBi.Controllers
         }
     }
 }
+
