@@ -27,7 +27,7 @@ namespace eccentricBi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string hostname = "eccentricdb.cddaby3dqmhc.us-east-2.rds.amazonaws.com";
+            string hostname = "eccentricdb.cddaby3dqmhc.us-east-2.rds.amazonaws.com;Encrypt=True";
             string dbname = "eccentricdb";
             string username = "pattruong";
             string password = "eccentricbi";
