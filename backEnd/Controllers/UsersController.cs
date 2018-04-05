@@ -94,8 +94,10 @@ namespace eccentricBi.Controllers
                 oldUser.Email = newUser.Email;
                 oldUser.Username = newUser.Username;
                 oldUser.Role = newUser.Role;
-            }
 
+                Console.WriteLine("USER PUT SUCCESS");
+            }
+            
             _context.SaveChanges();
             return newUser;
         }
@@ -115,6 +117,7 @@ namespace eccentricBi.Controllers
         {
             var b = _context.User.FirstOrDefault(x => x.Username == username);
             _context.User.Remove(b);
+            Console.WriteLine("USER DELETE SUCCESS");
             _context.SaveChanges();
         }
     }
