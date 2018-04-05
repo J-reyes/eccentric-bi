@@ -35,12 +35,20 @@ namespace eccentricBi.Controllers
 
         }
 
+        // GET api/users/find/<username>
+        [HttpGet("find/{username}")]
+        public User GetByUsername(string username)
+        {
+            var b = _context.User.FirstOrDefault(x => x.Username == username);
+            return b;
+        }
+
         // POST api/users/login
         [HttpPost("login")]
         public LoginResponse Login([FromBody] User user)
         {
             var lookUp = _context.User.FirstOrDefault(x => x.Username == user.Username);
-            if (lookUp != null) 
+            if (lookUp != null)
             {
                 if (lookUp.Password == user.Password)
                 {
@@ -74,11 +82,38 @@ namespace eccentricBi.Controllers
             return newUser;
         }
 
+        // PUT api/users/find/
+        [HttpPut("find/{username}")]
+        public User PutNewUser(string username, [FromBody]User newUser)
+        {
+            var oldUser = _context.User.FirstOrDefault(x => x.Username == username);
+            if (oldUser != null)
+            {
+                oldUser.FirstName = newUser.FirstName;
+                oldUser.LastName = newUser.LastName;
+                oldUser.Email = newUser.Email;
+                oldUser.Username = newUser.Username;
+                oldUser.Role = newUser.Role;
+            }
+
+            _context.SaveChanges();
+            return newUser;
+        }
+
         // DELETE api/users/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
             var b = _context.User.FirstOrDefault(x => x.Id == id);
+            _context.User.Remove(b);
+            _context.SaveChanges();
+        }
+
+         // DELETE api/users/5
+        [HttpDelete("find/{username}")]
+        public void DeleteByUsername(string username)
+        {
+            var b = _context.User.FirstOrDefault(x => x.Username == username);
             _context.User.Remove(b);
             _context.SaveChanges();
         }
