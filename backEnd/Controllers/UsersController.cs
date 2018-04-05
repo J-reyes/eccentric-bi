@@ -19,14 +19,14 @@ namespace eccentricBi.Controllers
             _context = context;
         }
 
-        // GET: api/values
+        // GET: api/users
         [HttpGet]
         public List<User> Get()
         {
             return _context.User.ToList();
         }
 
-        // GET api/values/5
+        // GET api/users/5
         [HttpGet("{id}")]
         public User Get(int id)
         {
@@ -35,7 +35,26 @@ namespace eccentricBi.Controllers
 
         }
 
-        // POST api/values
+        // POST api/users/login
+        [HttpPost("login")]
+        public LoginResponse Login([FromBody] User user)
+        {
+            var lookUp = _context.User.FirstOrDefault(x => x.Username == user.Username);
+            if (lookUp != null) 
+            {
+                if (lookUp.Password == user.Password)
+                {
+                    Console.WriteLine("Successful Password Entry");
+                    return new LoginResponse(true, lookUp.Role);
+                }
+                Console.WriteLine("Username Exists But Wrong Password");
+                return new LoginResponse(false, null);
+            }
+            Console.WriteLine("Username Not Found");
+            return new LoginResponse(false, null);
+        }
+
+        // POST api/users
         [HttpPost]
         public User Post([FromBody]User newUser)
         {
@@ -44,7 +63,9 @@ namespace eccentricBi.Controllers
             return newUser;
         }
 
-        // PUT api/values/5
+
+
+        // PUT api/users/5
         [HttpPut("{id}")]
         public User Put(int id, [FromBody]User newUser)
         {
@@ -53,7 +74,7 @@ namespace eccentricBi.Controllers
             return newUser;
         }
 
-        // DELETE api/values/5
+        // DELETE api/users/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

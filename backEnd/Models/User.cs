@@ -12,20 +12,20 @@ namespace eccentricBi.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public bool IsAdmin {get; set; }
+        public string Role {get; set; }
 
         public User()
         {
         }
         
-        public User(int iD, string firstName, string lastName, string email, string username, string password, bool isAdmin)
+        public User(int iD, string firstName, string lastName, string email, string username, string password, string role)
         {
             Id = iD;
             FirstName = firstName;
             LastName = lastName;
             Username = username;
             Password = password;
-            IsAdmin = isAdmin;
+            Role = role;
         }
 
     }
