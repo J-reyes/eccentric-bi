@@ -2,19 +2,22 @@ import { ADD_TILE } from '../actions/index';
 import BarTile from '../../tiles/tile-components/bar-tile';
 import DoughnutTile from '../../tiles/tile-components/doughnut-tile'
 import ToDoTile from '../../tiles/tile-components/todo-tile'
+import doughnutTile from '../../tiles/tile-components/doughnut-tile';
+import LineContainer from '../../tiles/tile-components/line-container';
 
 export const BARCHART = 'BARCHART';
 export const DOUGHNUTCHART = 'DOUGHNUTCHART';
 export const TODOTILE = 'TODOTILE';
+export const LINECONTAINER = 'LINECONTAINER';
 
 
 
 const tileState = {
-    tileList: [BarTile, ToDoTile]
+    tileList: [LineContainer, ToDoTile]
 }
 
 const tiles = {
-    BARCHART: BarTile,
+    LINECONTAINER: LineContainer,
     DOUGHNUTCHART: DoughnutTile,
     TODOTILE: ToDoTile
 }
