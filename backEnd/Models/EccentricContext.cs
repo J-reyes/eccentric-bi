@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace eccentricBi.Models
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
@@ -14,12 +15,12 @@ namespace eccentricBi.Models
 
         public EccentricContext()
         {
-            
+
         }
 
         public EccentricContext(DbContextOptions<EccentricContext> options) : base(options)
         {
-            
+
         }
 
         public DbSet<BusinessLead> BusinessLead { get; set; }

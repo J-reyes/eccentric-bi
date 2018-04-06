@@ -24,14 +24,14 @@ namespace eccentricBi.Controllers
         [HttpGet]
         public List<BusinessLead> Get()
         {
-            return _context.BusinessLead.ToList();
+            return _context.BusinessLead.Include(u => u.User).ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public BusinessLead Get(int id)
         {
-            var b = _context.BusinessLead.FirstOrDefault(x => x.Id == id);
+            var b = _context.BusinessLead.Include(u => u.User).FirstOrDefault(x => x.Id == id);
             return b;
 
         }

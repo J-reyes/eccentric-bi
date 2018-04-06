@@ -1,4 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace eccentricBi.Models
 {
     public class BusinessLead
@@ -9,8 +12,13 @@ namespace eccentricBi.Models
         public string Phone { get; set; }
         public string Description { get; set; } 
         public DateTime TimeOfContact { get; set; } 
-        public string Owner { get; set; } 
         public bool IsComplete { get; set; }
+
+        
+        public int UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public User User { get; set; }
 
         public BusinessLead()
         {
@@ -24,7 +32,6 @@ namespace eccentricBi.Models
             Phone = phone;
             Description = description;
             TimeOfContact = timeofcontact;
-            Owner = owner;
             IsComplete = isComplete;
         }
     }

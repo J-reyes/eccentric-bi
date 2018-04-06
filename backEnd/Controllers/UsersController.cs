@@ -23,23 +23,22 @@ namespace eccentricBi.Controllers
         [HttpGet]
         public List<User> Get()
         {
-            return _context.User.ToList();
+            return _context.User.Include(u => u.BusinessLeads).ToList();
         }
 
         // GET api/users/5
         [HttpGet("{id}")]
         public User Get(int id)
         {
-            var b = _context.User.FirstOrDefault(x => x.Id == id);
+            var b = _context.User.Include(u => u.BusinessLeads).FirstOrDefault(x => x.Id == id);
             return b;
-
         }
 
         // GET api/users/find/<username>
         [HttpGet("find/{username}")]
         public User GetByUsername(string username)
         {
-            var b = _context.User.FirstOrDefault(x => x.Username == username);
+            var b = _context.User.Include(u => u.BusinessLeads).FirstOrDefault(x => x.Username == username);
             return b;
         }
 
