@@ -1,0 +1,46 @@
+{
+  "name": "eccentric-bi",
+  "version": "1.0.0",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 3000 --hot --host 192.168.7.244 --history-api-fallback",
+    "build": "webpack"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "chart.js": "^2.7.2",
+    "prop-types": "^15.6.1",
+    "react": "15.3.0",
+    "react-bootstrap": "^0.32.1",
+    "react-chartjs-2": "^2.7.0",
+    "react-dom": "15.3.0",
+    "react-dragula": "^1.1.17",
+    "react-icons-kit": "^1.0.7",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-sidebar": "^2.3.2",
+    "react-sidenav": "^2.1.2",
+    "react-transition-group": "1.1.2",
+    "reactstrap": "^4.8.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.28.8",
+    "file-loader": "^1.1.11",
+    "style-loader": "^0.19.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}

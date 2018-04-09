@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#dashboard-tile {
+    height: 14em;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+#large-tiles {
+    height: 30em;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    height: 100%;
+}
+
+.small-widget {
+    height: 14em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+#tiles-div {
+    margin-top: 15px;
+    height: 25vh;
+    width: auto;
+    background: lightblue;
+}
+#graph-div {
+    margin-top: 20px;
+    height: 35vh;
+    width: auto;
+    background: blue;
+
+}
+#button {
+    margin-top: 5px;
+}
+
+.widget-row {
+    min-height: 20em
+}
+
+.dashboard-container {
+    background-color: whitesmoke;
+}
+
+.dashboard-tile {
+    padding: 2em;
+    margin: 0.5em
+}
+
+#sidebar {
+    width: 100%;
+}
+
+#logo {
+    background: black;
+    width: 100%;
+    height: 30%;
+}
+
+#image-header {
+    height: 20vh;
+    width: 100%
+}
+#user-profile-image {
+    border: 5px solid grey;
+   margin-top: -35px
+}
+#image {
+    width: 50px;
+    height: 40px;
+    border: 1px solid gold;
+
+}
+#search-icon{
+    padding-top: 5px;
+    padding-right: 10px;
+}
+#card-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header {
+    padding: 15px 15px 0 15px;
+}
+.content-card {
+    padding: 15px;
+}
+
+.content-card.row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.content-card.row.col-md-5 {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.content-card.row.col-md-5.form-group {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.content-card.row.col-md-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.content-card.row.col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.content-card.row.col-md-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.content-card.row.col-md-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#update-profile{
+    border: 1;
+    padding: 8px 16px;
+    font-size: 14px
+}
+textarea {
+    height: auto;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    color: #565656;
+    padding: 8px 12px;
+}
+
+#login-box {
+    margin: 20px;
+}
+#header-h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#header-h4 {
+    margin-bottom: 30px;
+}
+hr {
+    border: 1px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#header-text {
+    
+    padding-bottom: 30px;
+}
+h4 {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 300;
+    
+}
+p {
+    font-size: 12px;
+}
+#card-plugin {
+    margin-bottom: 30px;
+}
+.registration-form-container {
+   background-image: url('../images/registerBackground.jpeg');
+    
+    height: 100vh;
+    background-position: center;
+  
+    background-size: cover;
+
+}
+.login-container {
+   background-image: url('../images/background1.jpeg');
+    
+    height: 100vh;
+    background-position: center;
+  
+    background-size: cover;
+
+}
+#login-main {
+    display: flex;
+    align-items: center;     /* vertical */
+  justify-content: center;
+
+}
+#leadForm{
+    
+    padding-top: 30px;
+    padding-left: 22%;
+}
+#formInput {
+    padding-top: 10px;
+}
+#completeBox {
+    margin-top: 15px;
+}
+.LeadPage {
+    margin-top: 0px;
+
+}
+#leadCard {
+    padding: 0 60px;
+}

@@ -6,3 +6,5 @@ backEnd/bin/
 backEnd/.vscode/
 *.csproj
 
+leadsComponent/node_modules/
+leadsComponent/package-lock.json
