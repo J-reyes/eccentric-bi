@@ -20,7 +20,7 @@ class CreateUserWindow extends Component {
     createUser = event => {
         event.preventDefault();
 
-        let newUser = this.state.user
+        let newUser = this.state.user;
 
         axios.post('http://192.168.7.244:5000/api/users', newUser)
             .then( res => {

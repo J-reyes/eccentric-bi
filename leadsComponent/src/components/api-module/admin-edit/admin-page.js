@@ -10,8 +10,10 @@ class AdminPage extends Component {
     render() {
         return (
             <div className="container">
-                
+                {/* Displays All Users in DB */}
                 <UserContainer />
+
+                {/* Displays All Leads in DB */}
                 <LeadTableContainer />
             </div>
         )
