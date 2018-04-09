@@ -20,7 +20,7 @@ namespace eccentricBi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5000", "http://192.168.7.244:5000")
+                .UseUrls("http://localhost:5000", "http://192.168.7.244:5000")      // remove this line if you wish to host locally
                 .Build();
     }
 }

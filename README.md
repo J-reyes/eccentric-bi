@@ -2,6 +2,20 @@
 
 ![Eccentric Image](frontEnd/public/images/EccentricBI_270218_2.png)
 
+# Part 2 #
+
+## Instructions to Test Files ##
+
+In order to test our web API locally, go to "Program.cs" in the "backEnd" folder and remove line 23.
+
+## Application Goals ##
+
+- Database implementation for account management
+- Database implementation for business data
+
+
+# Part 1 #
+
 ## Application Goals ##
 
 ***
