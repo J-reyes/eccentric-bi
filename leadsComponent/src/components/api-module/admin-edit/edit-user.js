@@ -17,9 +17,7 @@ class EditUser extends Component {
         }
     }
 
-    // ${this.props.username}
-
-    //STILL NEED call user by ID
+    // Gets User Data from API to propogate form
     componentDidMount() {
         axios.get(`http://192.168.7.244:5000/api/users/find/${this.props.username}`)
             .then(res => {
@@ -37,14 +35,15 @@ class EditUser extends Component {
             })
     }
 
+
     saveEdit = event => {
         event.preventDefault();
         let updatedUser = this.state.user;
 
-        axios.put((`http://192.168.7.244:5000/api/users/find/${this.state.user.username}`), updatedUser)
+        axios.put(`http://192.168.7.244:5000/api/users/find/${this.state.user.username}`, updatedUser)
             .then(res => {
                 console.log(res.data);
-                this.props.reload();
+                this.props.reload();        // reloads table data in parent container to see live changes
             })
         
         this.setState({
@@ -105,10 +104,6 @@ class EditUser extends Component {
                             <label>Password</label>
                             <input type="password" className="form-control" value={this.state.user.password} onChange={e => this.setState({ user: { ...this.state.user, password: e.target.value } })} />
                         </div>
-                        {/* <div className="form-group">
-                            <label>Leads Owned</label>
-                            <input type="text" className="form-control" value={this.state.user.leadsOwned} onChange={e => this.setState({ user: { ...this.state.user, leadsOwned: e.target.value } })} />
-                        </div> */}
                         <div className="form-group">
                             <label>Role</label>
                             <input type="text" className="form-control" value={this.state.user.role} onChange={e => this.setState({ user: { ...this.state.user, role: e.target.value } })} />
