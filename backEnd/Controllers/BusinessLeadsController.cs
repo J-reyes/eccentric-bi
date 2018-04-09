@@ -47,7 +47,7 @@ namespace eccentricBi.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public BusinessLead Put(int id, [FromBody]BusinessLead newLead)
+        public BusinessLead Put([FromBody]BusinessLead newLead)
         {
             _context.Entry(newLead).State = EntityState.Modified;
             _context.SaveChanges();

@@ -9,10 +9,33 @@
 In order to test our web API locally, go to "Program.cs" in the "backEnd" folder and remove line 23.
 
 ## Application Goals ##
+- [x] User experience differentiating admins from users
+- [x] User ability to create and manage leads
+- [x] Admin privileges to create/edit users, track user leads reports
+- [x] Database implementation for account management
+- [x] Database implementation for business data
 
-- Database implementation for account management
-- Database implementation for business data
+## Leads CRUD and Sort App ##
 
+![Leads Image](/img-for-readme/leads-page.png)
+
+We created a single page application for users to create leads that will be stored on our MS SQL backend. Users have the ability to edit their leads and sort them by name/date/email.
+
+## Admin Privileges Functionality ##
+
+![Create User Image](/img-for-readme/create-user.png)
+
+This is a web application available only to admins where admins can create, edit, and delete user accounts. Admins have the ability to give users admin priveledges and can also update email addresses. Users can also be sorted by name, username, and email.
+
+![Edit User Image](/img-for-readme/edit-user.png)
+
+![View User Image](/img-for-readme/view-all-users.png)
+
+Admins are also able to view all leads in the database and edit all leads. These leads can be sorted by lead name, lead email, and owner name.
+
+## Database Implementation for Account Management and Business Data ## 
+
+MS SQL data tables were created and organized with WebAPI 2.0. These tables are linked to the frontend with logic written in C# with Entity Framework Core.
 
 # Part 1 #
 

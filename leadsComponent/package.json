@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./src/app.js",
   "scripts": {
-    "start": "webpack-dev-server --port 3000 --hot --host 192.168.7.244 --history-api-fallback",
+    "start": "webpack-dev-server --history-api-fallback",
     "build": "webpack"
   },
   "license": "ISC",

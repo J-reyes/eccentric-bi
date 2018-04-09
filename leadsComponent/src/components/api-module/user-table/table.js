@@ -21,7 +21,7 @@ const Table = props => (
                             <td key={uniqid()}>
                                 {
                                     index === 4 ? "*****" :
-                                    index === 6 ? <button onClick={() => props.leadsDropdown(item)}  className="btn btn-default">Leads Dropdown</button> : 
+                                    index === 6 ? <button onClick={() => props.leadsDropdown(item)}  className="btn btn-primary">Leads Dropdown</button> : 
                                     item
                                 }
                             </td>
